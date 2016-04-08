@@ -15,6 +15,9 @@
 		6A7E25271CB66E6300A83959 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A7E25251CB66E6300A83959 /* LaunchScreen.storyboard */; };
 		6A7E25321CB66E6400A83959 /* IndoorLocation1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7E25311CB66E6400A83959 /* IndoorLocation1Tests.swift */; };
 		6A7E253D1CB66E6400A83959 /* IndoorLocation1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7E253C1CB66E6400A83959 /* IndoorLocation1UITests.swift */; };
+		6A7E254B1CB6861D00A83959 /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A7E254A1CB6861D00A83959 /* Mapbox.framework */; };
+		6A7E254C1CB6861D00A83959 /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A7E254A1CB6861D00A83959 /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6A91064E1CB7859600F197D6 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A91064D1CB7859600F197D6 /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6A7E254D1CB6861D00A83959 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6A7E254C1CB6861D00A83959 /* Mapbox.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		6A7E25161CB66E6300A83959 /* IndoorLocation1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IndoorLocation1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A7E25191CB66E6300A83959 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +66,8 @@
 		6A7E25381CB66E6400A83959 /* IndoorLocation1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IndoorLocation1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A7E253C1CB66E6400A83959 /* IndoorLocation1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndoorLocation1UITests.swift; sourceTree = "<group>"; };
 		6A7E253E1CB66E6400A83959 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A7E254A1CB6861D00A83959 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapbox.framework; sourceTree = "<group>"; };
+		6A91064D1CB7859600F197D6 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A7E254B1CB6861D00A83959 /* Mapbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +99,7 @@
 		6A7E250D1CB66E6300A83959 = {
 			isa = PBXGroup;
 			children = (
+				6A7E254A1CB6861D00A83959 /* Mapbox.framework */,
 				6A7E25181CB66E6300A83959 /* IndoorLocation1 */,
 				6A7E25301CB66E6400A83959 /* IndoorLocation1Tests */,
 				6A7E253B1CB66E6400A83959 /* IndoorLocation1UITests */,
@@ -106,6 +127,7 @@
 				6A7E25251CB66E6300A83959 /* LaunchScreen.storyboard */,
 				6A7E25281CB66E6300A83959 /* Info.plist */,
 				6A7E25201CB66E6300A83959 /* IndoorLocation1.xcdatamodeld */,
+				6A91064D1CB7859600F197D6 /* DataController.swift */,
 			);
 			path = IndoorLocation1;
 			sourceTree = "<group>";
@@ -138,6 +160,7 @@
 				6A7E25121CB66E6300A83959 /* Sources */,
 				6A7E25131CB66E6300A83959 /* Frameworks */,
 				6A7E25141CB66E6300A83959 /* Resources */,
+				6A7E254D1CB6861D00A83959 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -260,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A7E25221CB66E6300A83959 /* IndoorLocation1.xcdatamodeld in Sources */,
+				6A91064E1CB7859600F197D6 /* DataController.swift in Sources */,
 				6A7E251C1CB66E6300A83959 /* ViewController.swift in Sources */,
 				6A7E251A1CB66E6300A83959 /* AppDelegate.swift in Sources */,
 			);
@@ -403,6 +427,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = IndoorLocation1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Bang.IndoorLocation1;
@@ -414,6 +442,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = IndoorLocation1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Bang.IndoorLocation1;
@@ -488,6 +520,7 @@
 				6A7E25431CB66E6400A83959 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6A7E25441CB66E6400A83959 /* Build configuration list for PBXNativeTarget "IndoorLocation1Tests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +529,7 @@
 				6A7E25461CB66E6400A83959 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6A7E25471CB66E6400A83959 /* Build configuration list for PBXNativeTarget "IndoorLocation1UITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +538,7 @@
 				6A7E25491CB66E6400A83959 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
