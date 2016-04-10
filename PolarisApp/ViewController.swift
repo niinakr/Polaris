@@ -15,18 +15,62 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
-    @IBAction func selfPosition(sender: AnyObject) {
-        
-        
-    }
-    
-    
     @IBOutlet weak var searchView: UISearchBar!
     
     @IBOutlet weak var favouriteView: UIButton!
     
-    @IBAction func favouriteAdd(sender: AnyObject) {
+    @IBAction func selfPosition(sender: AnyObject) {
+    print("position button pressed")
+        
     }
+    
+    @IBAction func displayfavourites() {
+        //reference to appDelegate
+        let appdel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        
+        //reference to context
+        let context: NSManagedObjectContext = appdel.managedObjectContext
+        
+        let request = NSFetchRequest(entityName: "Favourites")
+        request.returnsObjectsAsFaults = false;
+        
+        do {
+        let result: NSArray =  try context.executeFetchRequest(request)
+            if (result.count > 0) {
+                for res in result {
+                    print(res)
+                }
+            }
+            else {
+                print("0 results returned")
+            }
+        } catch{}
+        
+        
+    }
+    
+    @IBAction func addasfavourite() {
+        //reference to appDelegate
+        let appdel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        
+        //reference to context
+        let context: NSManagedObjectContext = appdel.managedObjectContext
+        
+        let newfavourite = NSEntityDescription.insertNewObjectForEntityForName("Favourites", inManagedObjectContext: context) as NSManagedObject
+        newfavourite.setValue("" + searchView.text!, forKey: "favouriteplace")
+        
+        do {
+            try context.save()
+            print(newfavourite)
+        } catch {}
+        
+        
+
+    }
+    
+
+    
+   
     
     
     
@@ -42,6 +86,4 @@ class ViewController: UIViewController {
     
     
 }
-
-
 

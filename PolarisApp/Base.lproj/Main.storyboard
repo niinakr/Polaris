@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,35 +15,27 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CoC-W0-aBg">
-                                <rect key="frame" x="0.0" y="108" width="600" height="432"/>
+                                <rect key="frame" x="0.0" y="108" width="375" height="432"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="Wfw-RQ-Q3N" appends="YES" id="NsO-kf-Jyg"/>
                                     <outletCollection property="gestureRecognizers" destination="h9f-uK-tty" appends="YES" id="94e-od-skN"/>
                                 </connections>
                             </mapView>
-                            <searchBar contentMode="redraw" misplaced="YES" text="Searching room name" showsBookmarkButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2wj-4Z-zJk">
-                                <rect key="frame" x="0.0" y="64" width="519" height="44"/>
+                            <searchBar contentMode="redraw" text="Searching room name" showsBookmarkButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2wj-4Z-zJk">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <scopeButtonTitles>
                                     <string>Title</string>
                                     <string>Title</string>
                                 </scopeButtonTitles>
                             </searchBar>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ie1-yt-GgJ">
-                                <rect key="frame" x="312" y="538" width="288" height="62"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Favourite"/>
-                                <connections>
-                                    <action selector="addFavourite:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hBy-R3-ZB0"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTm-H5-fAZ">
-                                <rect key="frame" x="0.0" y="538" width="301" height="62"/>
+                                <rect key="frame" x="0.0" y="538" width="158" height="62"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <size key="titleShadowOffset" width="3" height="3"/>
                                 <state key="normal" title="Your Position"/>
@@ -59,27 +52,43 @@
                                     <action selector="favouriteAdd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U3t-nN-ynD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3DW-fT-pnT">
+                                <rect key="frame" x="212" y="538" width="163" height="62"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Favourite"/>
+                                <connections>
+                                    <action selector="displayfavourites" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fde-Qi-VK8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oV-LI-RyR">
+                                <rect key="frame" x="132" y="538" width="112" height="62"/>
+                                <state key="normal" title="Add as favourite"/>
+                                <connections>
+                                    <action selector="addasfavourite" destination="BYZ-38-t0r" eventType="touchUpInside" id="BNl-aY-gKK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2wj-4Z-zJk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="09G-Rd-8nm"/>
                             <constraint firstItem="qTm-H5-fAZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0ZR-jo-bgq"/>
                             <constraint firstItem="2wj-4Z-zJk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0iJ-3i-08u"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ie1-yt-GgJ" secondAttribute="bottom" id="5hY-bS-P1P"/>
-                            <constraint firstItem="Ie1-yt-GgJ" firstAttribute="bottom" secondItem="qTm-H5-fAZ" secondAttribute="bottom" id="9zc-Ag-Z3x"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3DW-fT-pnT" secondAttribute="bottom" id="2hg-jA-xo2"/>
                             <constraint firstItem="qTm-H5-fAZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BsU-VX-kD6"/>
                             <constraint firstItem="CoC-W0-aBg" firstAttribute="top" secondItem="2wj-4Z-zJk" secondAttribute="bottom" id="Cnk-QK-MqD"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qTm-H5-fAZ" secondAttribute="bottom" id="FUv-Tg-dak"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3DW-fT-pnT" secondAttribute="trailing" id="GkQ-NB-BOk"/>
                             <constraint firstAttribute="trailing" secondItem="CoC-W0-aBg" secondAttribute="trailing" id="Kgc-z8-fV4"/>
-                            <constraint firstAttribute="trailing" secondItem="Ie1-yt-GgJ" secondAttribute="trailing" id="YYV-rE-OEW"/>
                             <constraint firstAttribute="trailing" secondItem="2wj-4Z-zJk" secondAttribute="trailing" id="bES-JO-W7x"/>
                             <constraint firstItem="CoC-W0-aBg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uDJ-xp-b7H"/>
                             <constraint firstItem="2wj-4Z-zJk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xu7-VH-ewV"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="b3Q-2u-rbe"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="favouriteView" destination="Ie1-yt-GgJ" id="uI1-gy-K5v"/>
                         <outlet property="mapView" destination="CoC-W0-aBg" id="6q9-lW-coK"/>
                         <outlet property="searchView" destination="2wj-4Z-zJk" id="f4y-4G-Jdm"/>
                     </connections>
@@ -88,13 +97,14 @@
                 <tapGestureRecognizer id="Wfw-RQ-Q3N"/>
                 <pinchGestureRecognizer id="h9f-uK-tty"/>
             </objects>
-            <point key="canvasLocation" x="520" y="291"/>
+            <point key="canvasLocation" x="308.5" y="302.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jRt-AW-Xed">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1sE-uC-irJ" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XD1-YA-tGY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

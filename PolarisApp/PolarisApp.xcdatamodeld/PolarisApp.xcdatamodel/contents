@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Automatic">
+    <entity name="Favourites" syncable="YES">
+        <attribute name="favouriteplace" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="RoomName" syncable="YES">
         <attribute name="roomName" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
@@ -20,5 +23,6 @@
         <element name="RoomName" positionX="-63" positionY="-18" width="128" height="60"/>
         <element name="Student" positionX="-54" positionY="-9" width="128" height="105"/>
         <element name="Teacher" positionX="-36" positionY="9" width="128" height="120"/>
+        <element name="Favourites" positionX="-9" positionY="72" width="128" height="60"/>
     </elements>
 </model>
