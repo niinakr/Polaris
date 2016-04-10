@@ -1,4 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Automatic">
+    <entity name="RoomName" syncable="YES">
+        <attribute name="roomName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Student" syncable="YES">
+        <attribute name="gender" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="major" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="minor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="year" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="Teacher" syncable="YES">
+        <attribute name="contact" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nameTeacher" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teachingSubject" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="teacher_room" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Teacher" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="RoomName" positionX="-63" positionY="-18" width="128" height="60"/>
+        <element name="Student" positionX="-54" positionY="-9" width="128" height="105"/>
+        <element name="Teacher" positionX="-36" positionY="9" width="128" height="120"/>
+    </elements>
 </model>

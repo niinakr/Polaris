@@ -15,6 +15,9 @@
 		3EE744F21CB78E88004D0AEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EE744F01CB78E88004D0AEF /* LaunchScreen.storyboard */; };
 		3EE744FD1CB78E88004D0AEF /* PolarisAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE744FC1CB78E88004D0AEF /* PolarisAppTests.swift */; };
 		3EE745081CB78E88004D0AEF /* PolarisAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE745071CB78E88004D0AEF /* PolarisAppUITests.swift */; };
+		3EE745161CBAB7E6004D0AEF /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE745151CBAB7E6004D0AEF /* DataController.swift */; };
+		3EE745181CBAB9B3004D0AEF /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE745171CBAB9B3004D0AEF /* Mapbox.framework */; };
+		3EE745191CBAB9B3004D0AEF /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE745171CBAB9B3004D0AEF /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3EE7451A1CBAB9B3004D0AEF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3EE745191CBAB9B3004D0AEF /* Mapbox.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		3EE744E11CB78E87004D0AEF /* PolarisApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PolarisApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EE744E41CB78E88004D0AEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +66,8 @@
 		3EE745031CB78E88004D0AEF /* PolarisAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolarisAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EE745071CB78E88004D0AEF /* PolarisAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolarisAppUITests.swift; sourceTree = "<group>"; };
 		3EE745091CB78E88004D0AEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EE745151CBAB7E6004D0AEF /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		3EE745171CBAB9B3004D0AEF /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapbox.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EE745181CBAB9B3004D0AEF /* Mapbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +99,7 @@
 		3EE744D81CB78E87004D0AEF = {
 			isa = PBXGroup;
 			children = (
+				3EE745171CBAB9B3004D0AEF /* Mapbox.framework */,
 				3EE744E31CB78E88004D0AEF /* PolarisApp */,
 				3EE744FB1CB78E88004D0AEF /* PolarisAppTests */,
 				3EE745061CB78E88004D0AEF /* PolarisAppUITests */,
@@ -106,6 +127,7 @@
 				3EE744F01CB78E88004D0AEF /* LaunchScreen.storyboard */,
 				3EE744F31CB78E88004D0AEF /* Info.plist */,
 				3EE744EB1CB78E88004D0AEF /* PolarisApp.xcdatamodeld */,
+				3EE745151CBAB7E6004D0AEF /* DataController.swift */,
 			);
 			path = PolarisApp;
 			sourceTree = "<group>";
@@ -138,6 +160,7 @@
 				3EE744DD1CB78E87004D0AEF /* Sources */,
 				3EE744DE1CB78E87004D0AEF /* Frameworks */,
 				3EE744DF1CB78E87004D0AEF /* Resources */,
+				3EE7451A1CBAB9B3004D0AEF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -263,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EE744ED1CB78E88004D0AEF /* PolarisApp.xcdatamodeld in Sources */,
+				3EE745161CBAB7E6004D0AEF /* DataController.swift in Sources */,
 				3EE744E71CB78E88004D0AEF /* ViewController.swift in Sources */,
 				3EE744E51CB78E88004D0AEF /* AppDelegate.swift in Sources */,
 			);
@@ -408,6 +432,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PolarisApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = comniina.example..PolarisApp;
@@ -419,6 +447,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PolarisApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = comniina.example..PolarisApp;
