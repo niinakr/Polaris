@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -41,15 +40,6 @@
                                     <action selector="selfPosition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2qH-bh-FIu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4N-yo-ecd">
-                                <rect key="frame" x="519" y="64" width="81" height="44"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Add"/>
-                                <connections>
-                                    <action selector="addFavourite:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p8X-bo-Ruf"/>
-                                    <action selector="favouriteAdd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U3t-nN-ynD"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oV-LI-RyR">
                                 <rect key="frame" x="208" y="538" width="167" height="62"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -67,12 +57,11 @@
                                     <outletCollection property="gestureRecognizers" destination="h9f-uK-tty" appends="YES" id="94e-od-skN"/>
                                 </connections>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="53" placeholderIntrinsicHeight="44" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3DW-fT-pnT">
-                                <rect key="frame" x="227" y="131" width="53" height="44"/>
-                                <size key="titleShadowOffset" width="5" height="0.0"/>
-                                <state key="normal" title="Add to favourites" image="star"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSf-mk-8yE">
+                                <rect key="frame" x="323" y="64" width="52" height="44"/>
+                                <state key="normal" image="star"/>
                                 <connections>
-                                    <action selector="addasfavourite" destination="BYZ-38-t0r" eventType="touchUpInside" id="CC7-Wo-X4b"/>
+                                    <action selector="addasfavourite" destination="BYZ-38-t0r" eventType="touchUpInside" id="rJr-f7-fmG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -81,12 +70,10 @@
                             <constraint firstItem="2wj-4Z-zJk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="09G-Rd-8nm"/>
                             <constraint firstItem="qTm-H5-fAZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0ZR-jo-bgq"/>
                             <constraint firstItem="2wj-4Z-zJk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0iJ-3i-08u"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3DW-fT-pnT" secondAttribute="bottom" constant="515" id="2hg-jA-xo2"/>
                             <constraint firstItem="1oV-LI-RyR" firstAttribute="trailing" secondItem="CoC-W0-aBg" secondAttribute="trailing" id="6v4-2f-1FW"/>
                             <constraint firstItem="qTm-H5-fAZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BsU-VX-kD6"/>
                             <constraint firstItem="CoC-W0-aBg" firstAttribute="top" secondItem="2wj-4Z-zJk" secondAttribute="bottom" id="Cnk-QK-MqD"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qTm-H5-fAZ" secondAttribute="bottom" id="FUv-Tg-dak"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="3DW-fT-pnT" secondAttribute="trailing" constant="-9" id="GkQ-NB-BOk"/>
                             <constraint firstItem="1oV-LI-RyR" firstAttribute="leading" secondItem="qTm-H5-fAZ" secondAttribute="trailing" constant="50" id="HMC-hn-xa2"/>
                             <constraint firstAttribute="trailing" secondItem="CoC-W0-aBg" secondAttribute="trailing" id="Kgc-z8-fV4"/>
                             <constraint firstItem="qTm-H5-fAZ" firstAttribute="top" secondItem="1oV-LI-RyR" secondAttribute="top" id="WGP-Ce-B36"/>
@@ -140,14 +127,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="FVv-ic-WpJ">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" id="FVv-ic-WpJ">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FVv-ic-WpJ" id="HH4-A9-g9f">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANa-hW-kaR">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANa-hW-kaR">
                                             <rect key="frame" x="32" y="11" width="291" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -155,6 +142,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="push" identifier="searchbyfavourite" id="aXK-vm-T95"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -173,4 +163,7 @@
     <resources>
         <image name="star" width="54" height="54"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="aXK-vm-T95"/>
+    </inferredMetricsTieBreakers>
 </document>

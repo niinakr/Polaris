@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var searchView: UISearchBar!
     
+    var favourite:Favourites?
+    
     
     @IBAction func selfPosition(sender: AnyObject) {
     print("position button pressed")
@@ -59,22 +61,27 @@ class ViewController: UIViewController {
         let newfavourite = NSEntityDescription.insertNewObjectForEntityForName("Favourites", inManagedObjectContext: context) as NSManagedObject
         newfavourite.setValue("" + searchView.text!, forKey: "favouriteplace")
         
+        if ("" + searchView.text! != "Searching room name") {
         do {
             try context.save()
             let a = UIAlertView(title: "Success", message: "Your favourite place is saved", delegate: nil, cancelButtonTitle: "OK")
             a.show()
             print(newfavourite)
         } catch {}
-        
+        }
+        else {
+            let b = UIAlertView(title: "Failed", message: "Type first something", delegate: nil, cancelButtonTitle: "OK")
+            b.show()
+
+            
+        }
         
 
     }
     
 
     
-   
-    
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,6 +90,12 @@ class ViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        
+        
+//        if let s = favourite {
+//            
+//            searchView.text = s.favouriteplace
+//        }
         // Dispose of any resources that can be recreated.
     }
     
