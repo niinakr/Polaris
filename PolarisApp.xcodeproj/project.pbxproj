@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E9AB1C51CBBC6BA004C38E8 /* favouritelistTBV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9AB1C41CBBC6BA004C38E8 /* favouritelistTBV.swift */; };
+		3E9AB1CC1CBBCEDF004C38E8 /* Favourites+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9AB1CA1CBBCEDF004C38E8 /* Favourites+CoreDataProperties.swift */; };
+		3E9AB1CD1CBBCEDF004C38E8 /* Favourites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9AB1CB1CBBCEDF004C38E8 /* Favourites.swift */; };
 		3EE744E51CB78E88004D0AEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE744E41CB78E88004D0AEF /* AppDelegate.swift */; };
 		3EE744E71CB78E88004D0AEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE744E61CB78E88004D0AEF /* ViewController.swift */; };
 		3EE744EA1CB78E88004D0AEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EE744E81CB78E88004D0AEF /* Main.storyboard */; };
@@ -52,6 +55,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3E9AB1C41CBBC6BA004C38E8 /* favouritelistTBV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = favouritelistTBV.swift; sourceTree = "<group>"; };
+		3E9AB1CA1CBBCEDF004C38E8 /* Favourites+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Favourites+CoreDataProperties.swift"; path = "../Favourites+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3E9AB1CB1CBBCEDF004C38E8 /* Favourites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Favourites.swift; path = ../Favourites.swift; sourceTree = "<group>"; };
 		3EE744E11CB78E87004D0AEF /* PolarisApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PolarisApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EE744E41CB78E88004D0AEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EE744E61CB78E88004D0AEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -120,9 +126,12 @@
 		3EE744E31CB78E88004D0AEF /* PolarisApp */ = {
 			isa = PBXGroup;
 			children = (
+				3E9AB1CB1CBBCEDF004C38E8 /* Favourites.swift */,
+				3E9AB1CA1CBBCEDF004C38E8 /* Favourites+CoreDataProperties.swift */,
 				3EE744E41CB78E88004D0AEF /* AppDelegate.swift */,
 				3EE744E61CB78E88004D0AEF /* ViewController.swift */,
 				3EE744E81CB78E88004D0AEF /* Main.storyboard */,
+				3E9AB1C41CBBC6BA004C38E8 /* favouritelistTBV.swift */,
 				3EE744EE1CB78E88004D0AEF /* Assets.xcassets */,
 				3EE744F01CB78E88004D0AEF /* LaunchScreen.storyboard */,
 				3EE744F31CB78E88004D0AEF /* Info.plist */,
@@ -286,6 +295,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EE744ED1CB78E88004D0AEF /* PolarisApp.xcdatamodeld in Sources */,
+				3E9AB1CD1CBBCEDF004C38E8 /* Favourites.swift in Sources */,
+				3E9AB1CC1CBBCEDF004C38E8 /* Favourites+CoreDataProperties.swift in Sources */,
+				3E9AB1C51CBBC6BA004C38E8 /* favouritelistTBV.swift in Sources */,
 				3EE745161CBAB7E6004D0AEF /* DataController.swift in Sources */,
 				3EE744E71CB78E88004D0AEF /* ViewController.swift in Sources */,
 				3EE744E51CB78E88004D0AEF /* AppDelegate.swift in Sources */,
@@ -523,6 +535,7 @@
 				3EE7450E1CB78E88004D0AEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3EE7450F1CB78E88004D0AEF /* Build configuration list for PBXNativeTarget "PolarisAppTests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +544,7 @@
 				3EE745111CB78E88004D0AEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3EE745121CB78E88004D0AEF /* Build configuration list for PBXNativeTarget "PolarisAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -539,6 +553,7 @@
 				3EE745141CB78E88004D0AEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

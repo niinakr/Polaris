@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,16 +20,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CoC-W0-aBg">
-                                <rect key="frame" x="0.0" y="108" width="375" height="432"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Wfw-RQ-Q3N" appends="YES" id="NsO-kf-Jyg"/>
-                                    <outletCollection property="gestureRecognizers" destination="h9f-uK-tty" appends="YES" id="94e-od-skN"/>
-                                </connections>
-                            </mapView>
-                            <searchBar contentMode="redraw" text="Searching room name" showsBookmarkButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2wj-4Z-zJk">
-                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                            <searchBar contentMode="redraw" placeholderIntrinsicWidth="297" placeholderIntrinsicHeight="44" text="Searching room name" showsBookmarkButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2wj-4Z-zJk">
+                                <rect key="frame" x="0.0" y="64" width="297" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <scopeButtonTitles>
                                     <string>Title</string>
@@ -36,6 +30,10 @@
                             </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTm-H5-fAZ">
                                 <rect key="frame" x="0.0" y="538" width="158" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="CW9-LS-IDJ"/>
+                                    <constraint firstAttribute="width" constant="158" id="zex-O3-KTx"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <size key="titleShadowOffset" width="3" height="3"/>
                                 <state key="normal" title="Your Position"/>
@@ -52,19 +50,29 @@
                                     <action selector="favouriteAdd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U3t-nN-ynD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3DW-fT-pnT">
-                                <rect key="frame" x="212" y="538" width="163" height="62"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oV-LI-RyR">
+                                <rect key="frame" x="208" y="538" width="167" height="62"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Favourite"/>
+                                <state key="normal" title="Your favourites"/>
                                 <connections>
-                                    <action selector="displayfavourites" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fde-Qi-VK8"/>
+                                    <action selector="displayfavourites" destination="BYZ-38-t0r" eventType="touchUpInside" id="d7W-Ic-Axc"/>
+                                    <segue destination="gFM-bo-RRW" kind="push" id="wct-yD-vTd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oV-LI-RyR">
-                                <rect key="frame" x="132" y="538" width="112" height="62"/>
-                                <state key="normal" title="Add as favourite"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CoC-W0-aBg">
+                                <rect key="frame" x="0.0" y="108" width="375" height="432"/>
+                                <gestureRecognizers/>
                                 <connections>
-                                    <action selector="addasfavourite" destination="BYZ-38-t0r" eventType="touchUpInside" id="BNl-aY-gKK"/>
+                                    <outletCollection property="gestureRecognizers" destination="Wfw-RQ-Q3N" appends="YES" id="NsO-kf-Jyg"/>
+                                    <outletCollection property="gestureRecognizers" destination="h9f-uK-tty" appends="YES" id="94e-od-skN"/>
+                                </connections>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="53" placeholderIntrinsicHeight="44" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3DW-fT-pnT">
+                                <rect key="frame" x="227" y="131" width="53" height="44"/>
+                                <size key="titleShadowOffset" width="5" height="0.0"/>
+                                <state key="normal" title="Add to favourites" image="star"/>
+                                <connections>
+                                    <action selector="addasfavourite" destination="BYZ-38-t0r" eventType="touchUpInside" id="CC7-Wo-X4b"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -73,13 +81,18 @@
                             <constraint firstItem="2wj-4Z-zJk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="09G-Rd-8nm"/>
                             <constraint firstItem="qTm-H5-fAZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0ZR-jo-bgq"/>
                             <constraint firstItem="2wj-4Z-zJk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0iJ-3i-08u"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3DW-fT-pnT" secondAttribute="bottom" id="2hg-jA-xo2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3DW-fT-pnT" secondAttribute="bottom" constant="515" id="2hg-jA-xo2"/>
+                            <constraint firstItem="1oV-LI-RyR" firstAttribute="trailing" secondItem="CoC-W0-aBg" secondAttribute="trailing" id="6v4-2f-1FW"/>
                             <constraint firstItem="qTm-H5-fAZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BsU-VX-kD6"/>
                             <constraint firstItem="CoC-W0-aBg" firstAttribute="top" secondItem="2wj-4Z-zJk" secondAttribute="bottom" id="Cnk-QK-MqD"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qTm-H5-fAZ" secondAttribute="bottom" id="FUv-Tg-dak"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="3DW-fT-pnT" secondAttribute="trailing" id="GkQ-NB-BOk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3DW-fT-pnT" secondAttribute="trailing" constant="-9" id="GkQ-NB-BOk"/>
+                            <constraint firstItem="1oV-LI-RyR" firstAttribute="leading" secondItem="qTm-H5-fAZ" secondAttribute="trailing" constant="50" id="HMC-hn-xa2"/>
                             <constraint firstAttribute="trailing" secondItem="CoC-W0-aBg" secondAttribute="trailing" id="Kgc-z8-fV4"/>
-                            <constraint firstAttribute="trailing" secondItem="2wj-4Z-zJk" secondAttribute="trailing" id="bES-JO-W7x"/>
+                            <constraint firstItem="qTm-H5-fAZ" firstAttribute="top" secondItem="1oV-LI-RyR" secondAttribute="top" id="WGP-Ce-B36"/>
+                            <constraint firstAttribute="trailing" secondItem="2wj-4Z-zJk" secondAttribute="trailing" constant="78" id="bES-JO-W7x"/>
+                            <constraint firstItem="1oV-LI-RyR" firstAttribute="baseline" secondItem="qTm-H5-fAZ" secondAttribute="firstBaseline" id="hhf-4g-fu0"/>
+                            <constraint firstItem="qTm-H5-fAZ" firstAttribute="baseline" secondItem="1oV-LI-RyR" secondAttribute="firstBaseline" id="puT-PY-t5n"/>
                             <constraint firstItem="CoC-W0-aBg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uDJ-xp-b7H"/>
                             <constraint firstItem="2wj-4Z-zJk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xu7-VH-ewV"/>
                         </constraints>
@@ -97,11 +110,12 @@
                 <tapGestureRecognizer id="Wfw-RQ-Q3N"/>
                 <pinchGestureRecognizer id="h9f-uK-tty"/>
             </objects>
-            <point key="canvasLocation" x="308.5" y="302.5"/>
+            <point key="canvasLocation" x="463.5" y="413.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jRt-AW-Xed">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ct0-F6-XQD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1sE-uC-irJ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -114,9 +128,49 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2gi-zy-fIz"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ct0-F6-XQD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="956" y="446"/>
+            <point key="canvasLocation" x="928.5" y="413.5"/>
+        </scene>
+        <!--FavouritelistTBV-->
+        <scene sceneID="g1G-BO-yGG">
+            <objects>
+                <tableViewController id="gFM-bo-RRW" customClass="favouritelistTBV" customModule="PolarisApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1G5-7K-rwZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="FVv-ic-WpJ">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FVv-ic-WpJ" id="HH4-A9-g9f">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANa-hW-kaR">
+                                            <rect key="frame" x="32" y="11" width="291" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="gFM-bo-RRW" id="1AB-J8-P8p"/>
+                            <outlet property="delegate" destination="gFM-bo-RRW" id="BOh-UR-Z6x"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="RuX-hT-eIs"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J3m-H8-Zg3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1341.5" y="419.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="star" width="54" height="54"/>
+    </resources>
 </document>

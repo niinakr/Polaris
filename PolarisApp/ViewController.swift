@@ -17,7 +17,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var searchView: UISearchBar!
     
-    @IBOutlet weak var favouriteView: UIButton!
     
     @IBAction func selfPosition(sender: AnyObject) {
     print("position button pressed")
@@ -25,6 +24,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func displayfavourites() {
+        
         //reference to appDelegate
         let appdel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
         
@@ -61,6 +61,8 @@ class ViewController: UIViewController {
         
         do {
             try context.save()
+            let a = UIAlertView(title: "Success", message: "Your favourite place is saved", delegate: nil, cancelButtonTitle: "OK")
+            a.show()
             print(newfavourite)
         } catch {}
         
