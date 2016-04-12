@@ -79,23 +79,25 @@ class ViewController: UIViewController {
 
     }
     
-
-    
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("testing")
+        
+        if let s = favourite {
+            
+            searchView.text = s.favouriteplace
+        }
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
-        
-//        if let s = favourite {
-//            
-//            searchView.text = s.favouriteplace
-//        }
+
         // Dispose of any resources that can be recreated.
     }
     

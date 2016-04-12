@@ -51,14 +51,16 @@ class favouritelistTBV: UITableViewController {
         return cell
     }
     
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if segue.identifier == "searchbyfavourite" {
-//            let v = segue.destinationViewController as! ViewController
-//            let indexpath = self.tableView.indexPathForSelectedRow
-//            let row = indexpath?.row
-//            print("selected row")
-//        }
-//    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "searchbyfavourite" {
+            let v = segue.destinationViewController as! ViewController
+            let indexpath = self.tableView.indexPathForSelectedRow
+            let row = indexpath?.row
+            print("selected row")
+            
+            v.favourite = favourites[row!]
+        }
+    }
 
 
 }
