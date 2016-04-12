@@ -56,10 +56,34 @@ class favouritelistTBV: UITableViewController {
             let v = segue.destinationViewController as! ViewController
             let indexpath = self.tableView.indexPathForSelectedRow
             let row = indexpath?.row
-            print("selected row")
+        
             
             v.favourite = favourites[row!]
         }
+    }
+    
+    
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath){
+        if editingStyle == .Delete {
+            print("testing deleting")
+            
+            
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            let moc = appDelegate.managedObjectContext
+            
+            
+            moc.deleteObject(favourites[indexPath.row])
+            appDelegate.saveContext()
+            
+           favourites.removeAtIndex(indexPath.row)
+            tableView.reloadData()
+            
+        }
+        
     }
 
 

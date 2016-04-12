@@ -61,7 +61,7 @@ class ViewController: UIViewController {
         let newfavourite = NSEntityDescription.insertNewObjectForEntityForName("Favourites", inManagedObjectContext: context) as NSManagedObject
         newfavourite.setValue("" + searchView.text!, forKey: "favouriteplace")
         
-        if ("" + searchView.text! != "Searching room name") {
+        if (("" + searchView.text! != "Searching room name") && ("" + searchView.text! != "")) {
         do {
             try context.save()
             let a = UIAlertView(title: "Success", message: "Your favourite place is saved", delegate: nil, cancelButtonTitle: "OK")
@@ -83,7 +83,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("testing")
         
         if let s = favourite {
             
