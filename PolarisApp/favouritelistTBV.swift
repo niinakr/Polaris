@@ -69,16 +69,16 @@ class favouritelistTBV: UITableViewController {
     
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath){
         if editingStyle == .Delete {
-            print("testing deleting")
             
-            
+            //get the shared instance of the app delegate and the managed object context.
             let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
             let moc = appDelegate.managedObjectContext
             
-            
+            //Object is deleted and the context is saved.
             moc.deleteObject(favourites[indexPath.row])
             appDelegate.saveContext()
             
+            //Table view is reloaded.
            favourites.removeAtIndex(indexPath.row)
             tableView.reloadData()
             
