@@ -40,7 +40,7 @@
                                     <constraint firstAttribute="height" constant="62" id="CW9-LS-IDJ"/>
                                     <constraint firstAttribute="width" constant="159" id="zex-O3-KTx"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
                                 <size key="titleShadowOffset" width="3" height="3"/>
                                 <state key="normal" title="Your Position"/>
                                 <userDefinedRuntimeAttributes>
@@ -51,22 +51,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="selfPosition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2qH-bh-FIu"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oV-LI-RyR">
-                                <rect key="frame" x="216" y="538" width="159" height="62"/>
-                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Favourites"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="displayfavourites" destination="BYZ-38-t0r" eventType="touchUpInside" id="d7W-Ic-Axc"/>
-                                    <segue destination="gFM-bo-RRW" kind="push" id="wct-yD-vTd"/>
                                 </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CoC-W0-aBg">
@@ -83,6 +67,22 @@
                                 <state key="normal" image="star"/>
                                 <connections>
                                     <action selector="addasfavourite" destination="BYZ-38-t0r" eventType="touchUpInside" id="rJr-f7-fmG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oV-LI-RyR">
+                                <rect key="frame" x="216" y="538" width="159" height="62"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
+                                <state key="normal" title="Favourites"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="displayfavourites" destination="BYZ-38-t0r" eventType="touchUpInside" id="d7W-Ic-Axc"/>
+                                    <segue destination="gFM-bo-RRW" kind="push" id="wct-yD-vTd"/>
                                 </connections>
                             </button>
                         </subviews>

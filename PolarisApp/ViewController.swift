@@ -58,11 +58,12 @@ class ViewController: UIViewController {
         //reference to context
         let context: NSManagedObjectContext = appdel.managedObjectContext
         
-        let newfavourite = NSEntityDescription.insertNewObjectForEntityForName("Favourites", inManagedObjectContext: context) as NSManagedObject
-        newfavourite.setValue("" + searchView.text!, forKey: "favouriteplace")
-        
         if (("" + searchView.text! != "Searching room name") && ("" + searchView.text! != "")) {
         do {
+            
+            let newfavourite = NSEntityDescription.insertNewObjectForEntityForName("Favourites", inManagedObjectContext: context) as NSManagedObject
+            newfavourite.setValue("" + searchView.text!, forKey: "favouriteplace")
+
             try context.save()
             let a = UIAlertView(title: "Success", message: "Your favourite place is saved", delegate: nil, cancelButtonTitle: "OK")
             a.show()

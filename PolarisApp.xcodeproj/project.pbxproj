@@ -10,6 +10,7 @@
 		3E9AB1C51CBBC6BA004C38E8 /* favouritelistTBV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9AB1C41CBBC6BA004C38E8 /* favouritelistTBV.swift */; };
 		3E9AB1CC1CBBCEDF004C38E8 /* Favourites+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9AB1CA1CBBCEDF004C38E8 /* Favourites+CoreDataProperties.swift */; };
 		3E9AB1CD1CBBCEDF004C38E8 /* Favourites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9AB1CB1CBBCEDF004C38E8 /* Favourites.swift */; };
+		3E9AB1D11CBD014A004C38E8 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E9AB1D01CBD014A004C38E8 /* Launch Screen.storyboard */; };
 		3EE744E51CB78E88004D0AEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE744E41CB78E88004D0AEF /* AppDelegate.swift */; };
 		3EE744E71CB78E88004D0AEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE744E61CB78E88004D0AEF /* ViewController.swift */; };
 		3EE744EA1CB78E88004D0AEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EE744E81CB78E88004D0AEF /* Main.storyboard */; };
@@ -58,6 +59,7 @@
 		3E9AB1C41CBBC6BA004C38E8 /* favouritelistTBV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = favouritelistTBV.swift; sourceTree = "<group>"; };
 		3E9AB1CA1CBBCEDF004C38E8 /* Favourites+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Favourites+CoreDataProperties.swift"; path = "../Favourites+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3E9AB1CB1CBBCEDF004C38E8 /* Favourites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Favourites.swift; path = ../Favourites.swift; sourceTree = "<group>"; };
+		3E9AB1D01CBD014A004C38E8 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		3EE744E11CB78E87004D0AEF /* PolarisApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PolarisApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EE744E41CB78E88004D0AEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EE744E61CB78E88004D0AEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				3EE744F31CB78E88004D0AEF /* Info.plist */,
 				3EE744EB1CB78E88004D0AEF /* PolarisApp.xcdatamodeld */,
 				3EE745151CBAB7E6004D0AEF /* DataController.swift */,
+				3E9AB1D01CBD014A004C38E8 /* Launch Screen.storyboard */,
 			);
 			path = PolarisApp;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			files = (
 				3EE744F21CB78E88004D0AEF /* LaunchScreen.storyboard in Resources */,
 				3EE744EF1CB78E88004D0AEF /* Assets.xcassets in Resources */,
+				3E9AB1D11CBD014A004C38E8 /* Launch Screen.storyboard in Resources */,
 				3EE744EA1CB78E88004D0AEF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
