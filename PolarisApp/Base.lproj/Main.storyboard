@@ -21,7 +21,7 @@
                         <subviews>
                             <searchBar contentMode="redraw" placeholderIntrinsicWidth="297" placeholderIntrinsicHeight="44" text="Searching room name" showsBookmarkButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2wj-4Z-zJk">
                                 <rect key="frame" x="0.0" y="64" width="297" height="44"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
                                 <scopeButtonTitles>
                                     <string>Title</string>
                                     <string>Title</string>
@@ -32,6 +32,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="8AX-Kq-hg6"/>
+                                </connections>
                             </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTm-H5-fAZ">
                                 <rect key="frame" x="0.0" y="538" width="159" height="62"/>

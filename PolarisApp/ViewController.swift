@@ -11,7 +11,7 @@ import MapKit
 import CoreData
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UISearchBarDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -19,6 +19,9 @@ class ViewController: UIViewController {
     
     var favourite:Favourites?
     
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
     
     @IBAction func selfPosition(sender: AnyObject) {
     print("position button pressed")
@@ -52,6 +55,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func addasfavourite() {
+        
+
+        
         //reference to appDelegate
         let appdel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
         
@@ -81,6 +87,7 @@ class ViewController: UIViewController {
     }
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -94,6 +101,8 @@ class ViewController: UIViewController {
         view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    
     
     //Calls this function when the tap is recognized.
     func dismissKeyboard() {
