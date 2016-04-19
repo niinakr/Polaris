@@ -15,6 +15,7 @@ class favouritelistTBV: UITableViewController {
     
     var favourites = [Favourites]()
     
+    
     override func viewDidAppear(animated: Bool) {
         
         let request = NSFetchRequest(entityName: "Favourites")
@@ -25,6 +26,7 @@ class favouritelistTBV: UITableViewController {
         }catch{}
         
         self.tableView.reloadData()
+        
         
         
     }
@@ -47,6 +49,7 @@ class favouritelistTBV: UITableViewController {
         
         let favourite = favourites[indexPath.row]
         cell.textLabel?.text = favourite.favouriteplace
+        cell.textLabel!.textColor = UIColor.whiteColor()
         
         return cell
     }
