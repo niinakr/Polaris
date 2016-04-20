@@ -11,7 +11,7 @@ import MapKit
 import CoreData
 
 
-class ViewController: UIViewController, UISearchBarDelegate {
+class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationManagerDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -198,10 +198,62 @@ class ViewController: UIViewController, UISearchBarDelegate {
 
     }
     
+    let locationManager = EILIndoorLocationManager()
+    var location: EILLocation!
+    //var myMap = MapViewController()
+    
+    
+    @IBOutlet weak var locationView: EILIndoorLocationView!
+    
+    func indoorLocationManager(manager: EILIndoorLocationManager,
+        didFailToUpdatePositionWithError error: NSError) {
+            print("failed to update position: \(error)")
+    }
+    
+    func indoorLocationManager(manager: EILIndoorLocationManager,
+        didUpdatePosition position: EILOrientedPoint,
+        withAccuracy positionAccuracy: EILPositionAccuracy,
+        inLocation location: EILLocation) {
+            var accuracy: String!
+            switch positionAccuracy {
+            case .VeryHigh: accuracy = "+/- 1.00m"
+            case .High:     accuracy = "+/- 1.62m"
+            case .Medium:   accuracy = "+/- 2.62m"
+            case .Low:      accuracy = "+/- 4.24m"
+            case .VeryLow:  accuracy = "+/- ? :-("
+            case .Unknown:  accuracy = "unknown"
+            }
+            print(String(format: "x: %5.2f, y: %5.2f, orientation: %3.0f, accuracy: %@",
+                position.x, position.y, position.orientation, accuracy))
+            
+            self.locationView.updatePosition(position)
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.locationManager.delegate = self
+        
+        //myMap.drawMap()
+        
+        ESTConfig.setupAppID("polarisapp-jdk", andAppToken: "42a557a97b7838d4741205f03705c1de")
+        
+        let fetchLocationRequest = EILRequestFetchLocation(locationIdentifier: "my-classroom")
+        fetchLocationRequest.sendRequestWithCompletion { (location, error) in
+            if location != nil {
+                self.location = location!
+               // self.locationView.showTrace = true
+                self.locationView.rotateOnPositionUpdate = false
+                
+                
+                self.locationView.drawLocation(location!)
+                
+                self.locationManager.startPositionUpdatesForLocation(self.location)
+            } else {
+                print("can't fetch location: \(error)")
+            }
+        }
     
         
         if let s = favourite {
