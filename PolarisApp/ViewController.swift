@@ -209,7 +209,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
             searchView.text = s.favouriteplace
         }
         
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action:Selector("dismissKeyboard"))
         view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view, typically from a nib.
         
