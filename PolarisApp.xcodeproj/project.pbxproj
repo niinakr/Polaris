@@ -1,0 +1,525 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6AEEB5CF1CC7962100FE341B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEEB5CE1CC7962100FE341B /* AppDelegate.swift */; };
+		6AEEB5D11CC7962100FE341B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEEB5D01CC7962100FE341B /* ViewController.swift */; };
+		6AEEB5D41CC7962100FE341B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AEEB5D21CC7962100FE341B /* Main.storyboard */; };
+		6AEEB5D71CC7962100FE341B /* PolarisApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6AEEB5D51CC7962100FE341B /* PolarisApp.xcdatamodeld */; };
+		6AEEB5D91CC7962100FE341B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AEEB5D81CC7962100FE341B /* Assets.xcassets */; };
+		6AEEB5DC1CC7962100FE341B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AEEB5DA1CC7962100FE341B /* LaunchScreen.storyboard */; };
+		6AEEB5E71CC7962100FE341B /* PolarisAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEEB5E61CC7962100FE341B /* PolarisAppTests.swift */; };
+		6AEEB5F21CC7962100FE341B /* PolarisAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEEB5F11CC7962100FE341B /* PolarisAppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6AEEB5E31CC7962100FE341B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6AEEB5C31CC7962100FE341B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6AEEB5CA1CC7962100FE341B;
+			remoteInfo = PolarisApp;
+		};
+		6AEEB5EE1CC7962100FE341B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6AEEB5C31CC7962100FE341B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6AEEB5CA1CC7962100FE341B;
+			remoteInfo = PolarisApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6AEEB5CB1CC7962100FE341B /* PolarisApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PolarisApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AEEB5CE1CC7962100FE341B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6AEEB5D01CC7962100FE341B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6AEEB5D31CC7962100FE341B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6AEEB5D61CC7962100FE341B /* PolarisApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PolarisApp.xcdatamodel; sourceTree = "<group>"; };
+		6AEEB5D81CC7962100FE341B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6AEEB5DB1CC7962100FE341B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6AEEB5DD1CC7962100FE341B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AEEB5E21CC7962100FE341B /* PolarisAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolarisAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AEEB5E61CC7962100FE341B /* PolarisAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolarisAppTests.swift; sourceTree = "<group>"; };
+		6AEEB5E81CC7962100FE341B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AEEB5ED1CC7962100FE341B /* PolarisAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolarisAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AEEB5F11CC7962100FE341B /* PolarisAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolarisAppUITests.swift; sourceTree = "<group>"; };
+		6AEEB5F31CC7962100FE341B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6AEEB5C81CC7962100FE341B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AEEB5DF1CC7962100FE341B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AEEB5EA1CC7962100FE341B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6AEEB5C21CC7962100FE341B = {
+			isa = PBXGroup;
+			children = (
+				6AEEB5CD1CC7962100FE341B /* PolarisApp */,
+				6AEEB5E51CC7962100FE341B /* PolarisAppTests */,
+				6AEEB5F01CC7962100FE341B /* PolarisAppUITests */,
+				6AEEB5CC1CC7962100FE341B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6AEEB5CC1CC7962100FE341B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6AEEB5CB1CC7962100FE341B /* PolarisApp.app */,
+				6AEEB5E21CC7962100FE341B /* PolarisAppTests.xctest */,
+				6AEEB5ED1CC7962100FE341B /* PolarisAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6AEEB5CD1CC7962100FE341B /* PolarisApp */ = {
+			isa = PBXGroup;
+			children = (
+				6AEEB5CE1CC7962100FE341B /* AppDelegate.swift */,
+				6AEEB5D01CC7962100FE341B /* ViewController.swift */,
+				6AEEB5D21CC7962100FE341B /* Main.storyboard */,
+				6AEEB5D81CC7962100FE341B /* Assets.xcassets */,
+				6AEEB5DA1CC7962100FE341B /* LaunchScreen.storyboard */,
+				6AEEB5DD1CC7962100FE341B /* Info.plist */,
+				6AEEB5D51CC7962100FE341B /* PolarisApp.xcdatamodeld */,
+			);
+			path = PolarisApp;
+			sourceTree = "<group>";
+		};
+		6AEEB5E51CC7962100FE341B /* PolarisAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				6AEEB5E61CC7962100FE341B /* PolarisAppTests.swift */,
+				6AEEB5E81CC7962100FE341B /* Info.plist */,
+			);
+			path = PolarisAppTests;
+			sourceTree = "<group>";
+		};
+		6AEEB5F01CC7962100FE341B /* PolarisAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6AEEB5F11CC7962100FE341B /* PolarisAppUITests.swift */,
+				6AEEB5F31CC7962100FE341B /* Info.plist */,
+			);
+			path = PolarisAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6AEEB5CA1CC7962100FE341B /* PolarisApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AEEB5F61CC7962100FE341B /* Build configuration list for PBXNativeTarget "PolarisApp" */;
+			buildPhases = (
+				6AEEB5C71CC7962100FE341B /* Sources */,
+				6AEEB5C81CC7962100FE341B /* Frameworks */,
+				6AEEB5C91CC7962100FE341B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PolarisApp;
+			productName = PolarisApp;
+			productReference = 6AEEB5CB1CC7962100FE341B /* PolarisApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6AEEB5E11CC7962100FE341B /* PolarisAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AEEB5F91CC7962100FE341B /* Build configuration list for PBXNativeTarget "PolarisAppTests" */;
+			buildPhases = (
+				6AEEB5DE1CC7962100FE341B /* Sources */,
+				6AEEB5DF1CC7962100FE341B /* Frameworks */,
+				6AEEB5E01CC7962100FE341B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6AEEB5E41CC7962100FE341B /* PBXTargetDependency */,
+			);
+			name = PolarisAppTests;
+			productName = PolarisAppTests;
+			productReference = 6AEEB5E21CC7962100FE341B /* PolarisAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6AEEB5EC1CC7962100FE341B /* PolarisAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AEEB5FC1CC7962100FE341B /* Build configuration list for PBXNativeTarget "PolarisAppUITests" */;
+			buildPhases = (
+				6AEEB5E91CC7962100FE341B /* Sources */,
+				6AEEB5EA1CC7962100FE341B /* Frameworks */,
+				6AEEB5EB1CC7962100FE341B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6AEEB5EF1CC7962100FE341B /* PBXTargetDependency */,
+			);
+			name = PolarisAppUITests;
+			productName = PolarisAppUITests;
+			productReference = 6AEEB5ED1CC7962100FE341B /* PolarisAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6AEEB5C31CC7962100FE341B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = iosdev;
+				TargetAttributes = {
+					6AEEB5CA1CC7962100FE341B = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 4FRF8Y7FFL;
+					};
+					6AEEB5E11CC7962100FE341B = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 4FRF8Y7FFL;
+						TestTargetID = 6AEEB5CA1CC7962100FE341B;
+					};
+					6AEEB5EC1CC7962100FE341B = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 4FRF8Y7FFL;
+						TestTargetID = 6AEEB5CA1CC7962100FE341B;
+					};
+				};
+			};
+			buildConfigurationList = 6AEEB5C61CC7962100FE341B /* Build configuration list for PBXProject "PolarisApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6AEEB5C21CC7962100FE341B;
+			productRefGroup = 6AEEB5CC1CC7962100FE341B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6AEEB5CA1CC7962100FE341B /* PolarisApp */,
+				6AEEB5E11CC7962100FE341B /* PolarisAppTests */,
+				6AEEB5EC1CC7962100FE341B /* PolarisAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6AEEB5C91CC7962100FE341B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AEEB5DC1CC7962100FE341B /* LaunchScreen.storyboard in Resources */,
+				6AEEB5D91CC7962100FE341B /* Assets.xcassets in Resources */,
+				6AEEB5D41CC7962100FE341B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AEEB5E01CC7962100FE341B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AEEB5EB1CC7962100FE341B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6AEEB5C71CC7962100FE341B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AEEB5D71CC7962100FE341B /* PolarisApp.xcdatamodeld in Sources */,
+				6AEEB5D11CC7962100FE341B /* ViewController.swift in Sources */,
+				6AEEB5CF1CC7962100FE341B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AEEB5DE1CC7962100FE341B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AEEB5E71CC7962100FE341B /* PolarisAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AEEB5E91CC7962100FE341B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AEEB5F21CC7962100FE341B /* PolarisAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6AEEB5E41CC7962100FE341B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6AEEB5CA1CC7962100FE341B /* PolarisApp */;
+			targetProxy = 6AEEB5E31CC7962100FE341B /* PBXContainerItemProxy */;
+		};
+		6AEEB5EF1CC7962100FE341B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6AEEB5CA1CC7962100FE341B /* PolarisApp */;
+			targetProxy = 6AEEB5EE1CC7962100FE341B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6AEEB5D21CC7962100FE341B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6AEEB5D31CC7962100FE341B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6AEEB5DA1CC7962100FE341B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6AEEB5DB1CC7962100FE341B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6AEEB5F41CC7962100FE341B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6AEEB5F51CC7962100FE341B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6AEEB5F71CC7962100FE341B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PolarisApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Bang.PolarisApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6AEEB5F81CC7962100FE341B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PolarisApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Bang.PolarisApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6AEEB5FA1CC7962100FE341B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PolarisAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Bang.PolarisAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PolarisApp.app/PolarisApp";
+			};
+			name = Debug;
+		};
+		6AEEB5FB1CC7962100FE341B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PolarisAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Bang.PolarisAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PolarisApp.app/PolarisApp";
+			};
+			name = Release;
+		};
+		6AEEB5FD1CC7962100FE341B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PolarisAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Bang.PolarisAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PolarisApp;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		6AEEB5FE1CC7962100FE341B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PolarisAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Bang.PolarisAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PolarisApp;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6AEEB5C61CC7962100FE341B /* Build configuration list for PBXProject "PolarisApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AEEB5F41CC7962100FE341B /* Debug */,
+				6AEEB5F51CC7962100FE341B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6AEEB5F61CC7962100FE341B /* Build configuration list for PBXNativeTarget "PolarisApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AEEB5F71CC7962100FE341B /* Debug */,
+				6AEEB5F81CC7962100FE341B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6AEEB5F91CC7962100FE341B /* Build configuration list for PBXNativeTarget "PolarisAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AEEB5FA1CC7962100FE341B /* Debug */,
+				6AEEB5FB1CC7962100FE341B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6AEEB5FC1CC7962100FE341B /* Build configuration list for PBXNativeTarget "PolarisAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AEEB5FD1CC7962100FE341B /* Debug */,
+				6AEEB5FE1CC7962100FE341B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6AEEB5D51CC7962100FE341B /* PolarisApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6AEEB5D61CC7962100FE341B /* PolarisApp.xcdatamodel */,
+			);
+			currentVersion = 6AEEB5D61CC7962100FE341B /* PolarisApp.xcdatamodel */;
+			path = PolarisApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 6AEEB5C31CC7962100FE341B /* Project object */;
+}
