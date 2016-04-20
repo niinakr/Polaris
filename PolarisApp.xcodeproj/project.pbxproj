@@ -10,6 +10,8 @@
 		3E37AC8B1CC52F560044E469 /* MyCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E37AC8A1CC52F560044E469 /* MyCustomButton.swift */; };
 		3E54EBCC1CC75FB9003A115E /* Beacons+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E54EBCA1CC75FB9003A115E /* Beacons+CoreDataProperties.swift */; };
 		3E54EBCD1CC75FB9003A115E /* Beacons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E54EBCB1CC75FB9003A115E /* Beacons.swift */; };
+		3E54EBD01CC788C3003A115E /* Room+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E54EBCE1CC788C3003A115E /* Room+CoreDataProperties.swift */; };
+		3E54EBD11CC788C3003A115E /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E54EBCF1CC788C3003A115E /* Room.swift */; };
 		3E9AB1C51CBBC6BA004C38E8 /* favouritelistTBV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9AB1C41CBBC6BA004C38E8 /* favouritelistTBV.swift */; };
 		3E9AB1CC1CBBCEDF004C38E8 /* Favourites+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9AB1CA1CBBCEDF004C38E8 /* Favourites+CoreDataProperties.swift */; };
 		3E9AB1CD1CBBCEDF004C38E8 /* Favourites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9AB1CB1CBBCEDF004C38E8 /* Favourites.swift */; };
@@ -62,6 +64,8 @@
 		3E37AC8A1CC52F560044E469 /* MyCustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomButton.swift; sourceTree = "<group>"; };
 		3E54EBCA1CC75FB9003A115E /* Beacons+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Beacons+CoreDataProperties.swift"; path = "../Beacons+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3E54EBCB1CC75FB9003A115E /* Beacons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Beacons.swift; path = ../Beacons.swift; sourceTree = "<group>"; };
+		3E54EBCE1CC788C3003A115E /* Room+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Room+CoreDataProperties.swift"; path = "../Room+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3E54EBCF1CC788C3003A115E /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Room.swift; path = ../Room.swift; sourceTree = "<group>"; };
 		3E9AB1C41CBBC6BA004C38E8 /* favouritelistTBV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = favouritelistTBV.swift; sourceTree = "<group>"; };
 		3E9AB1CA1CBBCEDF004C38E8 /* Favourites+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Favourites+CoreDataProperties.swift"; path = "../Favourites+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3E9AB1CB1CBBCEDF004C38E8 /* Favourites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Favourites.swift; path = ../Favourites.swift; sourceTree = "<group>"; };
@@ -134,6 +138,8 @@
 		3EE744E31CB78E88004D0AEF /* PolarisApp */ = {
 			isa = PBXGroup;
 			children = (
+				3E54EBCE1CC788C3003A115E /* Room+CoreDataProperties.swift */,
+				3E54EBCF1CC788C3003A115E /* Room.swift */,
 				3E54EBCA1CC75FB9003A115E /* Beacons+CoreDataProperties.swift */,
 				3E54EBCB1CC75FB9003A115E /* Beacons.swift */,
 				3E9AB1CB1CBBCEDF004C38E8 /* Favourites.swift */,
@@ -308,6 +314,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EE744ED1CB78E88004D0AEF /* PolarisApp.xcdatamodeld in Sources */,
+				3E54EBD01CC788C3003A115E /* Room+CoreDataProperties.swift in Sources */,
+				3E54EBD11CC788C3003A115E /* Room.swift in Sources */,
 				3E54EBCC1CC75FB9003A115E /* Beacons+CoreDataProperties.swift in Sources */,
 				3E9AB1CD1CBBCEDF004C38E8 /* Favourites.swift in Sources */,
 				3E9AB1CC1CBBCEDF004C38E8 /* Favourites+CoreDataProperties.swift in Sources */,

@@ -13,7 +13,7 @@
         <attribute name="favouriteplace" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="favour_Room" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Room" syncable="YES"/>
     </entity>
-    <entity name="Room" syncable="YES">
+    <entity name="Room" representedClassName=".Room" syncable="YES">
         <attribute name="beaconUUID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="roomName" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="room_Beacon" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Beacons" inverseName="beacon_Room" inverseEntity="Beacons" syncable="YES"/>
@@ -34,8 +34,8 @@
         <relationship name="teacher_room" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Room" inverseName="room_Teacher" inverseEntity="Room" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Favourites" positionX="-9" positionY="72" width="128" height="75"/>
         <element name="Beacons" positionX="-36" positionY="45" width="128" height="150"/>
+        <element name="Favourites" positionX="-9" positionY="72" width="128" height="75"/>
         <element name="Room" positionX="-9" positionY="81" width="128" height="105"/>
         <element name="Student" positionX="0" positionY="90" width="128" height="120"/>
         <element name="Teacher" positionX="9" positionY="99" width="128" height="120"/>
