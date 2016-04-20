@@ -54,7 +54,7 @@
                                 </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CoC-W0-aBg">
-                                <rect key="frame" x="0.0" y="122" width="375" height="418"/>
+                                <rect key="frame" x="0.0" y="125" width="375" height="418"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="Wfw-RQ-Q3N" appends="YES" id="NsO-kf-Jyg"/>
@@ -83,6 +83,14 @@
                                     <action selector="addasfavourite" destination="BYZ-38-t0r" eventType="touchUpInside" id="rJr-f7-fmG"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTN-bd-R69">
+                                <rect key="frame" x="125" y="140" width="98" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Beacons"/>
+                                <connections>
+                                    <action selector="displaybeacons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hsE-Nh-bFU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.4823529411764706" green="0.12156862745098039" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -91,16 +99,16 @@
                             <constraint firstItem="2wj-4Z-zJk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="12" id="0iJ-3i-08u"/>
                             <constraint firstItem="1oV-LI-RyR" firstAttribute="trailing" secondItem="CoC-W0-aBg" secondAttribute="trailing" constant="-20" id="6v4-2f-1FW"/>
                             <constraint firstItem="qTm-H5-fAZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="BsU-VX-kD6"/>
-                            <constraint firstItem="CoC-W0-aBg" firstAttribute="top" secondItem="2wj-4Z-zJk" secondAttribute="bottom" constant="14" id="Cnk-QK-MqD"/>
+                            <constraint firstItem="CoC-W0-aBg" firstAttribute="top" secondItem="2wj-4Z-zJk" secondAttribute="bottom" constant="17" id="Cnk-QK-MqD"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qTm-H5-fAZ" secondAttribute="bottom" constant="8" id="FUv-Tg-dak"/>
                             <constraint firstItem="1oV-LI-RyR" firstAttribute="leading" secondItem="qTm-H5-fAZ" secondAttribute="trailing" constant="17" id="HMC-hn-xa2"/>
                             <constraint firstAttribute="trailing" secondItem="CoC-W0-aBg" secondAttribute="trailing" id="Kgc-z8-fV4"/>
                             <constraint firstItem="qTm-H5-fAZ" firstAttribute="top" secondItem="1oV-LI-RyR" secondAttribute="top" id="WGP-Ce-B36"/>
                             <constraint firstAttribute="trailing" secondItem="2wj-4Z-zJk" secondAttribute="trailing" constant="72" id="bES-JO-W7x"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CoC-W0-aBg" secondAttribute="bottom" constant="83" id="fq7-EP-div"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CoC-W0-aBg" secondAttribute="bottom" constant="80" id="fq7-EP-div"/>
                             <constraint firstItem="1oV-LI-RyR" firstAttribute="baseline" secondItem="qTm-H5-fAZ" secondAttribute="firstBaseline" id="hhf-4g-fu0"/>
                             <constraint firstItem="CoC-W0-aBg" firstAttribute="trailing" secondItem="xSf-mk-8yE" secondAttribute="trailing" constant="12" id="i5s-hP-Kw2"/>
-                            <constraint firstItem="CoC-W0-aBg" firstAttribute="top" secondItem="xSf-mk-8yE" secondAttribute="bottom" constant="14" id="o9U-Ln-Ent"/>
+                            <constraint firstItem="CoC-W0-aBg" firstAttribute="top" secondItem="xSf-mk-8yE" secondAttribute="bottom" constant="17" id="o9U-Ln-Ent"/>
                             <constraint firstItem="qTm-H5-fAZ" firstAttribute="baseline" secondItem="1oV-LI-RyR" secondAttribute="firstBaseline" id="puT-PY-t5n"/>
                             <constraint firstItem="CoC-W0-aBg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uDJ-xp-b7H"/>
                             <constraint firstItem="2wj-4Z-zJk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="12" id="xu7-VH-ewV"/>

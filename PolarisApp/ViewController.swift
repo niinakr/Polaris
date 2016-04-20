@@ -28,6 +28,49 @@ class ViewController: UIViewController, UISearchBarDelegate {
         
     }
     
+    @IBAction func displaybeacons(sender: AnyObject) {
+        print("displaybeacons button pressed")
+        
+        
+        //reference to appDelegate
+        let appdel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+
+        
+        //reference to context
+        let context: NSManagedObjectContext = appdel.managedObjectContext
+        
+        // save data from beacons
+        let newbeacon1 = NSEntityDescription.insertNewObjectForEntityForName("Beacons", inManagedObjectContext: context) as NSManagedObject
+        newbeacon1.setValue("1881818jdjd89383", forKey: "id")
+        newbeacon1.setValue("2222", forKey: "major")
+        newbeacon1.setValue("1111", forKey: "minor")
+        newbeacon1.setValue("test", forKey: "name")
+        
+        let newbeacon2 = NSEntityDescription.insertNewObjectForEntityForName("Beacons", inManagedObjectContext: context) as NSManagedObject
+        newbeacon2.setValue("1881818j22289383", forKey: "id")
+        newbeacon2.setValue("3333", forKey: "major")
+        newbeacon2.setValue("4444", forKey: "minor")
+        newbeacon2.setValue("test2", forKey: "name")
+        
+        
+        //Display the information from beacons
+        let request = NSFetchRequest(entityName: "Beacons")
+        request.returnsObjectsAsFaults = false;
+        
+        do {
+            let result: NSArray =  try context.executeFetchRequest(request)
+            if (result.count > 0) {
+                for res in result {
+                    print(res)
+                }
+            }
+            else {
+                print("0 results returned")
+            }
+        } catch{}
+        
+    }
+    
     @IBAction func displayfavourites() {
         
         //reference to appDelegate
