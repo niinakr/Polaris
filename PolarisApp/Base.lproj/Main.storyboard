@@ -53,14 +53,6 @@
                                     <action selector="selfPosition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2qH-bh-FIu"/>
                                 </connections>
                             </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CoC-W0-aBg">
-                                <rect key="frame" x="0.0" y="125" width="375" height="418"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Wfw-RQ-Q3N" appends="YES" id="NsO-kf-Jyg"/>
-                                    <outletCollection property="gestureRecognizers" destination="h9f-uK-tty" appends="YES" id="94e-od-skN"/>
-                                </connections>
-                            </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oV-LI-RyR" customClass="MyCustomButton" customModule="PolarisApp" customModuleProvider="target">
                                 <rect key="frame" x="196" y="553" width="159" height="62"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -83,12 +75,28 @@
                                     <action selector="addasfavourite" destination="BYZ-38-t0r" eventType="touchUpInside" id="rJr-f7-fmG"/>
                                 </connections>
                             </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CoC-W0-aBg">
+                                <rect key="frame" x="0.0" y="125" width="375" height="418"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Wfw-RQ-Q3N" appends="YES" id="NsO-kf-Jyg"/>
+                                    <outletCollection property="gestureRecognizers" destination="h9f-uK-tty" appends="YES" id="94e-od-skN"/>
+                                </connections>
+                            </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTN-bd-R69">
-                                <rect key="frame" x="125" y="140" width="98" height="31"/>
+                                <rect key="frame" x="6" y="132" width="98" height="31"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Beacons"/>
                                 <connections>
                                     <action selector="displaybeacons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hsE-Nh-bFU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9D-BN-ogm">
+                                <rect key="frame" x="259" y="133" width="96" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Rooms"/>
+                                <connections>
+                                    <action selector="displayrooms:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RSU-1Y-HmW"/>
                                 </connections>
                             </button>
                         </subviews>

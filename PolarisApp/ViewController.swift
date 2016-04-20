@@ -28,6 +28,49 @@ class ViewController: UIViewController, UISearchBarDelegate {
         
     }
     
+    @IBAction func displayrooms(sender: AnyObject) {
+        print("displayrooms button pressed")
+        
+        //reference to appDelegate
+        let appdel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        
+        
+        //reference to context
+        let context: NSManagedObjectContext = appdel.managedObjectContext
+        
+        // save data from beacons
+        let newroom1 = NSEntityDescription.insertNewObjectForEntityForName("Room", inManagedObjectContext: context) as NSManagedObject
+        newroom1.setValue("test1", forKey: "roomName")
+        newroom1.setValue("2222", forKey: "beaconUUID")
+       
+        
+        let newroom2 = NSEntityDescription.insertNewObjectForEntityForName("Room", inManagedObjectContext: context) as NSManagedObject
+        newroom2.setValue("test2", forKey: "roomName")
+        newroom2.setValue("3333", forKey: "beaconUUID")
+        
+        
+        
+        //Display the information from beacons
+        let request = NSFetchRequest(entityName: "Room")
+        request.returnsObjectsAsFaults = false;
+        
+        do {
+            let result: NSArray =  try context.executeFetchRequest(request)
+            if (result.count > 0) {
+                for res in result {
+                    print(res)
+                }
+            }
+            else {
+                print("0 results returned")
+            }
+        } catch{}
+        
+    }
+
+        
+    
+    
     @IBAction func displaybeacons(sender: AnyObject) {
         print("displaybeacons button pressed")
         
