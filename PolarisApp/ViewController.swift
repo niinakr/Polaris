@@ -262,7 +262,7 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action:Selector("dismissKeyboard"))
         view.addGestureRecognizer(tap)
-        // Do any additional setup after loading the view, typically from a nib.
+        //// Do any additional setup after loading the view, typically from a nib.
         
         //add rooms as core data
         
