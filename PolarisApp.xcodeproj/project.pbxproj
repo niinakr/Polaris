@@ -276,7 +276,7 @@
 				TargetAttributes = {
 					3EE744E01CB78E87004D0AEF = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = S4A5DTM26G;
+						DevelopmentTeam = 4FRF8Y7FFL;
 					};
 					3EE744F71CB78E88004D0AEF = {
 						CreatedOnToolsVersion = 7.3;
@@ -548,6 +548,8 @@
 			baseConfigurationReference = 3F80A71B5055177E7D9434BD /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -555,8 +557,9 @@
 				INFOPLIST_FILE = PolarisApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = comniina.example..PolarisApp;
+				PRODUCT_BUNDLE_IDENTIFIER = BangNguyen.PolarisApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = ObjCBridge.h;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -567,6 +570,8 @@
 			baseConfigurationReference = 836CABC3954045544DEAD265 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -574,8 +579,9 @@
 				INFOPLIST_FILE = PolarisApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = comniina.example..PolarisApp;
+				PRODUCT_BUNDLE_IDENTIFIER = BangNguyen.PolarisApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = ObjCBridge.h;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
