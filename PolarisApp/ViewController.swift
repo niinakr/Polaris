@@ -11,9 +11,9 @@ import MapKit
 import CoreData
 
 
-class ViewController: UIViewController, UISearchBarDelegate {
+class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationManagerDelegate {
     
-    @IBOutlet weak var mapView: MKMapView!
+    
     
     @IBOutlet weak var searchView: UISearchBar!
     
@@ -28,7 +28,6 @@ class ViewController: UIViewController, UISearchBarDelegate {
     }
     
     func filtterrooms(searchtext: String) {
-        
         
         
         //reference to appDelegate
@@ -97,48 +96,48 @@ class ViewController: UIViewController, UISearchBarDelegate {
         
     
     
-    @IBAction func displaybeacons(sender: AnyObject) {
-        print("displaybeacons button pressed")
-        
-        
-        //reference to appDelegate
-        let appdel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-
-        
-        //reference to context
-        let context: NSManagedObjectContext = appdel.managedObjectContext
-        
-        // save data from beacons
-        let newbeacon1 = NSEntityDescription.insertNewObjectForEntityForName("Beacons", inManagedObjectContext: context) as NSManagedObject
-        newbeacon1.setValue("1881818jdjd89383", forKey: "id")
-        newbeacon1.setValue("2222", forKey: "major")
-        newbeacon1.setValue("1111", forKey: "minor")
-        newbeacon1.setValue("test", forKey: "name")
-        
-        let newbeacon2 = NSEntityDescription.insertNewObjectForEntityForName("Beacons", inManagedObjectContext: context) as NSManagedObject
-        newbeacon2.setValue("1881818j22289383", forKey: "id")
-        newbeacon2.setValue("3333", forKey: "major")
-        newbeacon2.setValue("4444", forKey: "minor")
-        newbeacon2.setValue("test2", forKey: "name")
-        
+//    @IBAction func displaybeacons(sender: AnyObject) {
+//        print("displaybeacons button pressed")
+//        
+//        
+//        //reference to appDelegate
+//        let appdel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+//
+//        
+//        //reference to context
+//        let context: NSManagedObjectContext = appdel.managedObjectContext
+//        
+//        // save data from beacons
+//        let newbeacon1 = NSEntityDescription.insertNewObjectForEntityForName("Beacons", inManagedObjectContext: context) as NSManagedObject
+//        newbeacon1.setValue("1881818jdjd89383", forKey: "id")
+//        newbeacon1.setValue("2222", forKey: "major")
+//        newbeacon1.setValue("1111", forKey: "minor")
+//        newbeacon1.setValue("test", forKey: "name")
+//        
+//        let newbeacon2 = NSEntityDescription.insertNewObjectForEntityForName("Beacons", inManagedObjectContext: context) as NSManagedObject
+//        newbeacon2.setValue("1881818j22289383", forKey: "id")
+//        newbeacon2.setValue("3333", forKey: "major")
+//        newbeacon2.setValue("4444", forKey: "minor")
+//        newbeacon2.setValue("test2", forKey: "name")
+    
         
         //Display the information from beacons
-        let request = NSFetchRequest(entityName: "Beacons")
-        request.returnsObjectsAsFaults = false;
-        
-        do {
-            let result: NSArray =  try context.executeFetchRequest(request)
-            if (result.count > 0) {
-                for res in result {
-                    print(res)
-                }
-            }
-            else {
-                print("0 results returned")
-            }
-        } catch{}
-        
-    }
+//        let request = NSFetchRequest(entityName: "Beacons")
+//        request.returnsObjectsAsFaults = false;
+//        
+//        do {
+//            let result: NSArray =  try context.executeFetchRequest(request)
+//            if (result.count > 0) {
+//                for res in result {
+//                    print(res)
+//                }
+//            }
+//            else {
+//                print("0 results returned")
+//            }
+//        } catch{}
+//        
+//    }
     
     @IBAction func displayfavourites() {
         
@@ -198,10 +197,62 @@ class ViewController: UIViewController, UISearchBarDelegate {
 
     }
     
+    let locationManager = EILIndoorLocationManager()
+    var location: EILLocation!
+    //var myMap = MapViewController()
+    
+    
+    @IBOutlet weak var locationView: EILIndoorLocationView!
+    
+    func indoorLocationManager(manager: EILIndoorLocationManager,
+        didFailToUpdatePositionWithError error: NSError) {
+            print("failed to update position: \(error)")
+    }
+    
+    func indoorLocationManager(manager: EILIndoorLocationManager,
+        didUpdatePosition position: EILOrientedPoint,
+        withAccuracy positionAccuracy: EILPositionAccuracy,
+        inLocation location: EILLocation) {
+            var accuracy: String!
+            switch positionAccuracy {
+            case .VeryHigh: accuracy = "+/- 1.00m"
+            case .High:     accuracy = "+/- 1.62m"
+            case .Medium:   accuracy = "+/- 2.62m"
+            case .Low:      accuracy = "+/- 4.24m"
+            case .VeryLow:  accuracy = "+/- ? :-("
+            case .Unknown:  accuracy = "unknown"
+            }
+            print(String(format: "x: %5.2f, y: %5.2f, orientation: %3.0f, accuracy: %@",
+                position.x, position.y, position.orientation, accuracy))
+            
+            self.locationView.updatePosition(position)
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.locationManager.delegate = self
+        
+        //myMap.drawMap()
+        
+        ESTConfig.setupAppID("polarisapp-jdk", andAppToken: "42a557a97b7838d4741205f03705c1de")
+        
+        let fetchLocationRequest = EILRequestFetchLocation(locationIdentifier: "my-classroom")
+        fetchLocationRequest.sendRequestWithCompletion { (location, error) in
+            if location != nil {
+                self.location = location!
+               // self.locationView.showTrace = true
+                self.locationView.rotateOnPositionUpdate = false
+                
+                
+                self.locationView.drawLocation(location!)
+                
+                self.locationManager.startPositionUpdatesForLocation(self.location)
+            } else {
+                print("can't fetch location: \(error)")
+            }
+        }
     
         
         if let s = favourite {
@@ -209,30 +260,30 @@ class ViewController: UIViewController, UISearchBarDelegate {
             searchView.text = s.favouriteplace
         }
         
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action:Selector("dismissKeyboard"))
         view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view, typically from a nib.
         
         //add rooms as core data
         
         //reference to appDelegate
-        let appdel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-        
-        
-        //reference to context
-        let context: NSManagedObjectContext = appdel.managedObjectContext
-        
-        // save data from beacons
-        let newroom1 = NSEntityDescription.insertNewObjectForEntityForName("Room", inManagedObjectContext: context) as NSManagedObject
-        newroom1.setValue("test1", forKey: "roomName")
-        newroom1.setValue("2222", forKey: "beaconUUID")
-        
-        
-        let newroom2 = NSEntityDescription.insertNewObjectForEntityForName("Room", inManagedObjectContext: context) as NSManagedObject
-        newroom2.setValue("test2", forKey: "roomName")
-        newroom2.setValue("3333", forKey: "beaconUUID")
-        
-        
+//        let appdel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+//        
+//        
+//        //reference to context
+//        let context: NSManagedObjectContext = appdel.managedObjectContext
+//        
+//        // save data from beacons
+//        let newroom1 = NSEntityDescription.insertNewObjectForEntityForName("Room", inManagedObjectContext: context) as NSManagedObject
+//        newroom1.setValue("test1", forKey: "roomName")
+//        newroom1.setValue("2222", forKey: "beaconUUID")
+//        
+//        
+//        let newroom2 = NSEntityDescription.insertNewObjectForEntityForName("Room", inManagedObjectContext: context) as NSManagedObject
+//        newroom2.setValue("test2", forKey: "roomName")
+//        newroom2.setValue("3333", forKey: "beaconUUID")
+//        
+//        
     }
     
     

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1sE-uC-irJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1sE-uC-irJ">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -20,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" placeholderIntrinsicWidth="297" placeholderIntrinsicHeight="44" text="Searching room name" showsBookmarkButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2wj-4Z-zJk">
-                                <rect key="frame" x="12" y="64" width="291" height="44"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                 <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="search"/>
                                 <scopeButtonTitles>
@@ -37,13 +36,28 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="8AX-Kq-hg6"/>
                                 </connections>
                             </searchBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="headTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTm-H5-fAZ" customClass="MyCustomButton" customModule="PolarisApp" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSf-mk-8yE">
+                                <rect key="frame" x="335" y="73" width="31" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="Dxt-h8-c8r"/>
+                                    <constraint firstAttribute="width" secondItem="xSf-mk-8yE" secondAttribute="height" multiplier="31:27" id="JBY-wH-gC9"/>
+                                    <constraint firstAttribute="width" constant="31" id="fTA-gZ-t3I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" image="star2">
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addasfavourite" destination="BYZ-38-t0r" eventType="touchUpInside" id="rJr-f7-fmG"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="svc-MD-Szc" customClass="EILIndoorLocationView">
+                                <rect key="frame" x="0.0" y="108" width="375" height="437"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="headTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTm-H5-fAZ" customClass="MyCustomButton" customModule="PolarisApp" customModuleProvider="target">
                                 <rect key="frame" x="20" y="553" width="159" height="62"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="62" id="CW9-LS-IDJ"/>
-                                    <constraint firstAttribute="width" constant="159" id="zex-O3-KTx"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
                                 <size key="titleShadowOffset" width="3" height="3"/>
                                 <state key="normal" title="Your Position">
@@ -53,15 +67,7 @@
                                     <action selector="selfPosition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2qH-bh-FIu"/>
                                 </connections>
                             </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CoC-W0-aBg">
-                                <rect key="frame" x="0.0" y="125" width="375" height="418"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Wfw-RQ-Q3N" appends="YES" id="NsO-kf-Jyg"/>
-                                    <outletCollection property="gestureRecognizers" destination="h9f-uK-tty" appends="YES" id="94e-od-skN"/>
-                                </connections>
-                            </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oV-LI-RyR" customClass="MyCustomButton" customModule="PolarisApp" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oV-LI-RyR" customClass="MyCustomButton" customModule="PolarisApp" customModuleProvider="target">
                                 <rect key="frame" x="196" y="553" width="159" height="62"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
@@ -73,67 +79,25 @@
                                     <segue destination="gFM-bo-RRW" kind="push" id="wct-yD-vTd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSf-mk-8yE">
-                                <rect key="frame" x="314" y="64" width="49" height="44"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal" image="star2">
-                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="addasfavourite" destination="BYZ-38-t0r" eventType="touchUpInside" id="rJr-f7-fmG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9D-BN-ogm">
-                                <rect key="frame" x="207" y="102" width="96" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="96" id="5SW-gG-eaa"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Rooms"/>
-                                <connections>
-                                    <action selector="displayrooms:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RSU-1Y-HmW"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTN-bd-R69">
-                                <rect key="frame" x="20" y="102" width="98" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="2LU-I1-2gC"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Beacons"/>
-                                <connections>
-                                    <action selector="displaybeacons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hsE-Nh-bFU"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.4823529411764706" green="0.12156862745098039" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="2wj-4Z-zJk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="09G-Rd-8nm"/>
-                            <constraint firstItem="qTm-H5-fAZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="0ZR-jo-bgq"/>
-                            <constraint firstItem="2wj-4Z-zJk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="12" id="0iJ-3i-08u"/>
-                            <constraint firstItem="1oV-LI-RyR" firstAttribute="trailing" secondItem="CoC-W0-aBg" secondAttribute="trailing" constant="-20" id="6v4-2f-1FW"/>
-                            <constraint firstItem="I9D-BN-ogm" firstAttribute="leading" secondItem="yTN-bd-R69" secondAttribute="trailing" constant="89" id="7pZ-WW-Q3w"/>
-                            <constraint firstItem="qTm-H5-fAZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="BsU-VX-kD6"/>
-                            <constraint firstItem="CoC-W0-aBg" firstAttribute="top" secondItem="2wj-4Z-zJk" secondAttribute="bottom" constant="17" id="Cnk-QK-MqD"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qTm-H5-fAZ" secondAttribute="bottom" constant="8" id="FUv-Tg-dak"/>
-                            <constraint firstItem="1oV-LI-RyR" firstAttribute="leading" secondItem="qTm-H5-fAZ" secondAttribute="trailing" constant="17" id="HMC-hn-xa2"/>
-                            <constraint firstItem="yTN-bd-R69" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="82" id="Jt8-ZZ-abw"/>
-                            <constraint firstItem="yTN-bd-R69" firstAttribute="leading" secondItem="qTm-H5-fAZ" secondAttribute="leading" id="JwL-Cl-5B7"/>
-                            <constraint firstAttribute="trailing" secondItem="CoC-W0-aBg" secondAttribute="trailing" id="Kgc-z8-fV4"/>
-                            <constraint firstItem="yTN-bd-R69" firstAttribute="centerY" secondItem="I9D-BN-ogm" secondAttribute="centerY" id="M7x-8i-vJC"/>
-                            <constraint firstItem="qTm-H5-fAZ" firstAttribute="top" secondItem="1oV-LI-RyR" secondAttribute="top" id="WGP-Ce-B36"/>
-                            <constraint firstItem="yTN-bd-R69" firstAttribute="top" secondItem="I9D-BN-ogm" secondAttribute="top" id="WYz-qa-u78"/>
-                            <constraint firstAttribute="trailing" secondItem="2wj-4Z-zJk" secondAttribute="trailing" constant="72" id="bES-JO-W7x"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CoC-W0-aBg" secondAttribute="bottom" constant="80" id="fq7-EP-div"/>
-                            <constraint firstItem="1oV-LI-RyR" firstAttribute="baseline" secondItem="qTm-H5-fAZ" secondAttribute="firstBaseline" id="hhf-4g-fu0"/>
-                            <constraint firstItem="CoC-W0-aBg" firstAttribute="trailing" secondItem="xSf-mk-8yE" secondAttribute="trailing" constant="12" id="i5s-hP-Kw2"/>
-                            <constraint firstItem="xSf-mk-8yE" firstAttribute="leading" secondItem="I9D-BN-ogm" secondAttribute="trailing" constant="11" id="ihl-Cn-ITi"/>
-                            <constraint firstItem="CoC-W0-aBg" firstAttribute="top" secondItem="xSf-mk-8yE" secondAttribute="bottom" constant="17" id="o9U-Ln-Ent"/>
-                            <constraint firstItem="qTm-H5-fAZ" firstAttribute="baseline" secondItem="1oV-LI-RyR" secondAttribute="firstBaseline" id="puT-PY-t5n"/>
-                            <constraint firstItem="xSf-mk-8yE" firstAttribute="top" secondItem="2wj-4Z-zJk" secondAttribute="top" id="qoM-nq-y7r"/>
-                            <constraint firstItem="CoC-W0-aBg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uDJ-xp-b7H"/>
-                            <constraint firstItem="I9D-BN-ogm" firstAttribute="trailing" secondItem="2wj-4Z-zJk" secondAttribute="trailing" id="uLj-JP-Cw7"/>
-                            <constraint firstItem="2wj-4Z-zJk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="12" id="xu7-VH-ewV"/>
+                            <constraint firstItem="qTm-H5-fAZ" firstAttribute="top" secondItem="svc-MD-Szc" secondAttribute="bottom" constant="8" id="0LK-Hy-VkM"/>
+                            <constraint firstItem="svc-MD-Szc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1Pl-Or-Sud"/>
+                            <constraint firstItem="1oV-LI-RyR" firstAttribute="height" secondItem="qTm-H5-fAZ" secondAttribute="height" id="1Y0-Dv-ZaN"/>
+                            <constraint firstItem="svc-MD-Szc" firstAttribute="top" secondItem="2wj-4Z-zJk" secondAttribute="bottom" id="2wC-Dy-ZSZ"/>
+                            <constraint firstItem="2wj-4Z-zJk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3Yh-oa-7FL"/>
+                            <constraint firstItem="1oV-LI-RyR" firstAttribute="width" secondItem="qTm-H5-fAZ" secondAttribute="width" id="GGV-QW-C7N"/>
+                            <constraint firstAttribute="trailing" secondItem="1oV-LI-RyR" secondAttribute="trailing" constant="20" id="Iz7-AI-6TA"/>
+                            <constraint firstItem="1oV-LI-RyR" firstAttribute="top" secondItem="svc-MD-Szc" secondAttribute="bottom" constant="8" id="Omx-Fm-H60"/>
+                            <constraint firstItem="svc-MD-Szc" firstAttribute="top" secondItem="2wj-4Z-zJk" secondAttribute="bottom" id="Rwf-4W-531"/>
+                            <constraint firstItem="2wj-4Z-zJk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="US7-Bg-AzC"/>
+                            <constraint firstItem="qTm-H5-fAZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="YSu-Za-bgj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qTm-H5-fAZ" secondAttribute="bottom" constant="8" id="Z7w-3S-5bu"/>
+                            <constraint firstAttribute="trailing" secondItem="svc-MD-Szc" secondAttribute="trailing" id="bD7-oU-8ch"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1oV-LI-RyR" secondAttribute="bottom" constant="8" id="pwb-2I-T3f"/>
+                            <constraint firstAttribute="trailing" secondItem="2wj-4Z-zJk" secondAttribute="trailing" id="ve9-j6-HYT"/>
+                            <constraint firstAttribute="trailing" secondItem="xSf-mk-8yE" secondAttribute="trailing" constant="9" id="xo2-Hz-Wsn"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -141,7 +105,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="mapView" destination="CoC-W0-aBg" id="6q9-lW-coK"/>
+                        <outlet property="locationView" destination="svc-MD-Szc" id="PBu-Hm-NMj"/>
                         <outlet property="searchView" destination="2wj-4Z-zJk" id="f4y-4G-Jdm"/>
                     </connections>
                 </viewController>
@@ -149,7 +113,7 @@
                 <tapGestureRecognizer id="Wfw-RQ-Q3N"/>
                 <pinchGestureRecognizer id="h9f-uK-tty"/>
             </objects>
-            <point key="canvasLocation" x="463.5" y="413.5"/>
+            <point key="canvasLocation" x="248.5" y="375.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jRt-AW-Xed">
