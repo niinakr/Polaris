@@ -136,7 +136,9 @@
                             <constraint firstItem="2wj-4Z-zJk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="12" id="xu7-VH-ewV"/>
                         </constraints>
                     </view>
-                    <toolbarItems/>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="Qz1-vu-kkg"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" id="b3Q-2u-rbe"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
