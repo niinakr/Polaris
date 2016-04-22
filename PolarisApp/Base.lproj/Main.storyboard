@@ -23,7 +23,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="mAt-cg-j3N" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="9LT-7A-Go6"/>
+                                    <segue destination="TqU-dZ-Z8p" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="uIv-r8-RQn"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Rooms" id="7h1-c1-bCD">
@@ -60,6 +60,35 @@
             </objects>
             <point key="canvasLocation" x="-187.5" y="-461.5"/>
         </scene>
+        <!--Menubar beacon-->
+        <scene sceneID="WMi-qn-c6f">
+            <objects>
+                <tableViewController id="TqU-dZ-Z8p" customClass="menubar_beacon" customModule="PolarisApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fm9-bG-wZD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="FaZ-gY-Klr">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FaZ-gY-Klr" id="eqd-qk-oQL">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="TqU-dZ-Z8p" id="UeJ-BE-sGx"/>
+                            <outlet property="delegate" destination="TqU-dZ-Z8p" id="jR5-OQ-bwo"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BLK-dM-gnP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="342.5" y="-1387.5"/>
+        </scene>
         <!--Menubar room-->
         <scene sceneID="Ymb-Sd-qkA">
             <objects>
@@ -85,34 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GdZ-iJ-5ei" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="362.5" y="-452.5"/>
-        </scene>
-        <!--Menubar beacon-->
-        <scene sceneID="6j2-9V-vRU">
-            <objects>
-                <viewController id="mAt-cg-j3N" customClass="menubar_beacon" customModule="PolarisApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="T7h-e3-b1G"/>
-                        <viewControllerLayoutGuide type="bottom" id="t5h-mo-GGd"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3PA-27-kDp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Beacons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQL-Ep-ftS">
-                                <rect key="frame" x="107" y="195" width="66" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZJr-Pf-hno" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="386.5" y="-1242.5"/>
+            <point key="canvasLocation" x="362.5" y="-504.5"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="7Ov-3r-OOg">
