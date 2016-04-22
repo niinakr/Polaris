@@ -182,14 +182,25 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
             newfavourite.setValue("" + searchView.text!, forKey: "favouriteName")
 
             try context.save()
-            let a = UIAlertView(title: "Success", message: "Your favourite place is saved", delegate: nil, cancelButtonTitle: "OK")
-            a.show()
+//            let a = UIAlertView(title: "Success", message: "Your favourite place is saved", delegate: nil, cancelButtonTitle: "OK")
+//            
+//            
+//            
+//            a.show()
+            let a = UIAlertController(title: "Success", message: "Your favourite place is saved", preferredStyle: UIAlertControllerStyle.Alert)
+            a.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(a, animated: true, completion: nil)
             print(newfavourite)
+            
         } catch {}
         }
         else {
-            let b = UIAlertView(title: "Failed", message: "Type first something", delegate: nil, cancelButtonTitle: "OK")
-            b.show()
+//            let b = UIAlertView(title: "Failed", message: "Type first something", delegate: nil, cancelButtonTitle: "OK")
+//            b.show()
+            
+            let b = UIAlertController(title: "Failed", message: "Type first something", preferredStyle: UIAlertControllerStyle.Alert)
+            b.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(b, animated: true, completion: nil)
 
             
         }
