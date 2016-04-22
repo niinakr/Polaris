@@ -18,7 +18,7 @@ class favouritelistTBV: UITableViewController {
     
     override func viewDidAppear(animated: Bool) {
         
-        let request = NSFetchRequest(entityName: "Favourite")
+        let request = NSFetchRequest(entityName: "Favourites")
         
         do {
             

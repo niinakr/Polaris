@@ -8,7 +8,7 @@
         <attribute name="uuid" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="beaconLocation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="locationBeacon" inverseEntity="Location" syncable="YES"/>
     </entity>
-    <entity name="Favourite" representedClassName=".Favourites" syncable="YES">
+    <entity name="Favourites" representedClassName=".Favourites" syncable="YES">
         <attribute name="favouriteName" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="favourLocation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="locationFavourite" inverseEntity="Location" syncable="YES"/>
     </entity>
@@ -19,7 +19,7 @@
         <attribute name="x" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="y" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="locationBeacon" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Beacon" inverseName="beaconLocation" inverseEntity="Beacon" syncable="YES"/>
-        <relationship name="locationFavourite" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Favourite" inverseName="favourLocation" inverseEntity="Favourite" syncable="YES"/>
+        <relationship name="locationFavourite" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Favourites" inverseName="favourLocation" inverseEntity="Favourites" syncable="YES"/>
         <relationship name="locationRoom" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Room" inverseName="roomLocation" inverseEntity="Room" syncable="YES"/>
         <relationship name="locationTarget" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Target" inverseName="targetLocation" inverseEntity="Target" syncable="YES"/>
     </entity>
@@ -38,9 +38,9 @@
     </entity>
     <elements>
         <element name="Beacon" positionX="-216" positionY="101" width="128" height="133"/>
-        <element name="Favourite" positionX="-74" positionY="344" width="128" height="73"/>
-        <element name="Target" positionX="241" positionY="371" width="128" height="133"/>
+        <element name="Favourites" positionX="-74" positionY="344" width="128" height="73"/>
         <element name="Location" positionX="-9" positionY="108" width="128" height="178"/>
         <element name="Room" positionX="205" positionY="135" width="128" height="88"/>
+        <element name="Target" positionX="241" positionY="371" width="128" height="133"/>
     </elements>
 </model>

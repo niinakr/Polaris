@@ -179,7 +179,7 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
         do {
             
             let newfavourite = NSEntityDescription.insertNewObjectForEntityForName("Favourites", inManagedObjectContext: context) as NSManagedObject
-            newfavourite.setValue("" + searchView.text!, forKey: "favouriteplace")
+            newfavourite.setValue("" + searchView.text!, forKey: "favouriteName")
 
             try context.save()
             let a = UIAlertView(title: "Success", message: "Your favourite place is saved", delegate: nil, cancelButtonTitle: "OK")
@@ -248,7 +248,7 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
                // self.locationView.showTrace = true
                 self.locationView.rotateOnPositionUpdate = false
                 self.locationView.locationBorderColor = UIColor.darkGrayColor()
-                self.locationView.locationBorderThickness = 2
+                self.locationView.locationBorderThickness = 3
                 
                 
                 self.locationView.drawLocation(location) //draw your location
