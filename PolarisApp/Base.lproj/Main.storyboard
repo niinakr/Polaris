@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1sE-uC-irJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1sE-uC-irJ">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -18,8 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="svc-MD-Szc" customClass="EILIndoorLocationView">
+                                <rect key="frame" x="0.0" y="108" width="375" height="437"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <searchBar contentMode="redraw" placeholderIntrinsicWidth="297" placeholderIntrinsicHeight="44" text="Searching room name" showsBookmarkButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2wj-4Z-zJk">
-                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <rect key="frame" x="29" y="64" width="288" height="44"/>
                                 <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="search"/>
                                 <scopeButtonTitles>
@@ -36,12 +40,12 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="8AX-Kq-hg6"/>
                                 </connections>
                             </searchBar>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSf-mk-8yE">
-                                <rect key="frame" x="335" y="73" width="31" height="27"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSf-mk-8yE">
+                                <rect key="frame" x="332" y="64" width="34" height="36"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="27" id="Dxt-h8-c8r"/>
-                                    <constraint firstAttribute="width" secondItem="xSf-mk-8yE" secondAttribute="height" multiplier="31:27" id="JBY-wH-gC9"/>
-                                    <constraint firstAttribute="width" constant="31" id="fTA-gZ-t3I"/>
+                                    <constraint firstAttribute="height" constant="36" id="Dxt-h8-c8r"/>
+                                    <constraint firstAttribute="width" secondItem="xSf-mk-8yE" secondAttribute="height" multiplier="31:27" constant="-7.3333333333333357" id="JBY-wH-gC9"/>
+                                    <constraint firstAttribute="width" constant="34" id="fTA-gZ-t3I"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" image="star2">
@@ -51,23 +55,19 @@
                                     <action selector="addasfavourite" destination="BYZ-38-t0r" eventType="touchUpInside" id="rJr-f7-fmG"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="svc-MD-Szc" customClass="EILIndoorLocationView">
-                                <rect key="frame" x="0.0" y="108" width="375" height="437"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="headTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTm-H5-fAZ" customClass="MyCustomButton" customModule="PolarisApp" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="159" placeholderIntrinsicHeight="62" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="headTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTm-H5-fAZ" customClass="MyCustomButton" customModule="PolarisApp" customModuleProvider="target">
                                 <rect key="frame" x="20" y="553" width="159" height="62"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
                                 <size key="titleShadowOffset" width="3" height="3"/>
-                                <state key="normal" title="Your Position">
+                                <state key="normal" title="  Your Position  ">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="selfPosition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2qH-bh-FIu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oV-LI-RyR" customClass="MyCustomButton" customModule="PolarisApp" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="159" placeholderIntrinsicHeight="62" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oV-LI-RyR" customClass="MyCustomButton" customModule="PolarisApp" customModuleProvider="target">
                                 <rect key="frame" x="196" y="553" width="159" height="62"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
@@ -86,7 +86,8 @@
                             <constraint firstItem="svc-MD-Szc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1Pl-Or-Sud"/>
                             <constraint firstItem="1oV-LI-RyR" firstAttribute="height" secondItem="qTm-H5-fAZ" secondAttribute="height" id="1Y0-Dv-ZaN"/>
                             <constraint firstItem="svc-MD-Szc" firstAttribute="top" secondItem="2wj-4Z-zJk" secondAttribute="bottom" id="2wC-Dy-ZSZ"/>
-                            <constraint firstItem="2wj-4Z-zJk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3Yh-oa-7FL"/>
+                            <constraint firstItem="2wj-4Z-zJk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="29" id="3Yh-oa-7FL"/>
+                            <constraint firstItem="xSf-mk-8yE" firstAttribute="top" secondItem="2wj-4Z-zJk" secondAttribute="top" id="4jE-5O-1Tq"/>
                             <constraint firstItem="1oV-LI-RyR" firstAttribute="width" secondItem="qTm-H5-fAZ" secondAttribute="width" id="GGV-QW-C7N"/>
                             <constraint firstAttribute="trailing" secondItem="1oV-LI-RyR" secondAttribute="trailing" constant="20" id="Iz7-AI-6TA"/>
                             <constraint firstItem="1oV-LI-RyR" firstAttribute="top" secondItem="svc-MD-Szc" secondAttribute="bottom" constant="8" id="Omx-Fm-H60"/>
@@ -96,7 +97,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qTm-H5-fAZ" secondAttribute="bottom" constant="8" id="Z7w-3S-5bu"/>
                             <constraint firstAttribute="trailing" secondItem="svc-MD-Szc" secondAttribute="trailing" id="bD7-oU-8ch"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1oV-LI-RyR" secondAttribute="bottom" constant="8" id="pwb-2I-T3f"/>
-                            <constraint firstAttribute="trailing" secondItem="2wj-4Z-zJk" secondAttribute="trailing" id="ve9-j6-HYT"/>
+                            <constraint firstAttribute="trailing" secondItem="2wj-4Z-zJk" secondAttribute="trailing" constant="58" id="ve9-j6-HYT"/>
                             <constraint firstAttribute="trailing" secondItem="xSf-mk-8yE" secondAttribute="trailing" constant="9" id="xo2-Hz-Wsn"/>
                         </constraints>
                     </view>
