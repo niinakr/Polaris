@@ -1,11 +1,80 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1sE-uC-irJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZBo-dD-gD6">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="6Np-db-0sw">
+            <objects>
+                <tableViewController id="cDQ-MJ-faI" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Bof-7E-CjD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="zVS-VD-pIB">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zVS-VD-pIB" id="SvW-JH-2BH">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cDQ-MJ-faI" id="tLr-fe-VZ1"/>
+                            <outlet property="delegate" destination="cDQ-MJ-faI" id="6P2-vr-1tb"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OFb-QU-cr5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-203.5" y="-379.5"/>
+        </scene>
+        <!--Reveal View Controller-->
+        <scene sceneID="7Ov-3r-OOg">
+            <objects>
+                <viewController id="ZBo-dD-gD6" customClass="SWRevealViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LQr-W6-nZC"/>
+                        <viewControllerLayoutGuide type="bottom" id="n7t-EU-O1I"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kU7-ya-7p1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="cDQ-MJ-faI" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="wBc-ny-7je"/>
+                        <segue destination="yPq-nI-qK6" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="wKk-TR-84Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ysy-gQ-lVw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-761.5" y="269.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ecp-dL-lOs">
+            <objects>
+                <navigationController id="yPq-nI-qK6" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uu8-pG-iTr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="nXQ-fD-jTc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LFm-Lt-ZAo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-269.5" y="461.5"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -18,11 +87,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="svc-MD-Szc" customClass="EILIndoorLocationView">
-                                <rect key="frame" x="0.0" y="108" width="375" height="437"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <searchBar contentMode="redraw" placeholderIntrinsicWidth="297" placeholderIntrinsicHeight="44" text="Searching room name" showsBookmarkButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2wj-4Z-zJk">
+                            <searchBar contentMode="redraw" misplaced="YES" placeholderIntrinsicWidth="297" placeholderIntrinsicHeight="44" text="Searching room name" showsBookmarkButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2wj-4Z-zJk">
                                 <rect key="frame" x="29" y="64" width="288" height="44"/>
                                 <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="search"/>
@@ -40,7 +105,7 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="8AX-Kq-hg6"/>
                                 </connections>
                             </searchBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSf-mk-8yE">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSf-mk-8yE">
                                 <rect key="frame" x="332" y="64" width="34" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="Dxt-h8-c8r"/>
@@ -79,6 +144,16 @@
                                     <segue destination="gFM-bo-RRW" kind="push" id="wct-yD-vTd"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="svc-MD-Szc" customClass="EILIndoorLocationView">
+                                <rect key="frame" x="0.0" y="108" width="375" height="437"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QUM-74-yk4">
+                                <rect key="frame" x="57" y="623" width="233" height="44"/>
+                                <items>
+                                    <barButtonItem title="Menu" id="8pZ-vR-YcN"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="0.4823529411764706" green="0.12156862745098039" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -101,13 +176,12 @@
                             <constraint firstAttribute="trailing" secondItem="xSf-mk-8yE" secondAttribute="trailing" constant="9" id="xo2-Hz-Wsn"/>
                         </constraints>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem title="Item" id="Qz1-vu-kkg"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="b3Q-2u-rbe"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="Menu" destination="8pZ-vR-YcN" id="jID-yt-n9Z"/>
                         <outlet property="locationView" destination="svc-MD-Szc" id="PBu-Hm-NMj"/>
                         <outlet property="searchView" destination="2wj-4Z-zJk" id="f4y-4G-Jdm"/>
                     </connections>
@@ -147,7 +221,7 @@
                         <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" id="FVv-ic-WpJ">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FVv-ic-WpJ" id="HH4-A9-g9f">
                                     <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
@@ -184,6 +258,6 @@
         <image name="star2" width="43" height="43"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aXK-vm-T95"/>
+        <segue reference="nXQ-fD-jTc"/>
     </inferredMetricsTieBreakers>
 </document>

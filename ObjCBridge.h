@@ -13,3 +13,4 @@
 #endif /* ObjCBridge_h */
 
 #import "EILIndoorSDK.h"
+#import "SWRevealViewController.h"
