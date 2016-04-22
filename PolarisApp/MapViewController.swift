@@ -17,6 +17,7 @@ let myClassroom = EILLocationBuilder()
 myClassroom.setLocationName("My Classroom")
     
     myClassroom.setLocationBoundaryPoints([
+        //x and y calculateed in meter
         EILPoint(x: 0.00, y: 0.00),
         EILPoint(x: 0.00, y: 09.00),
         EILPoint(x: 09.00, y: 09.00),

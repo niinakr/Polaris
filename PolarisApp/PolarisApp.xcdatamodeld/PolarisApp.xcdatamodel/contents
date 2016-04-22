@@ -37,10 +37,10 @@
         <relationship name="targetLocation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="locationTarget" inverseEntity="Location" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Beacon" positionX="-216" positionY="101" width="128" height="133"/>
-        <element name="Favourites" positionX="-74" positionY="344" width="128" height="73"/>
+        <element name="Beacon" positionX="-236" positionY="108" width="128" height="133"/>
+        <element name="Favourites" positionX="-225" positionY="287" width="128" height="73"/>
         <element name="Location" positionX="-9" positionY="108" width="128" height="178"/>
         <element name="Room" positionX="205" positionY="135" width="128" height="88"/>
-        <element name="Target" positionX="241" positionY="371" width="128" height="133"/>
+        <element name="Target" positionX="198" positionY="261" width="128" height="133"/>
     </elements>
 </model>

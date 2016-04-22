@@ -144,7 +144,7 @@
                         <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" id="FVv-ic-WpJ">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FVv-ic-WpJ" id="HH4-A9-g9f">
                                     <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
@@ -181,6 +181,6 @@
         <image name="star2" width="43" height="43"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aXK-vm-T95"/>
+        <segue reference="2gi-zy-fIz"/>
     </inferredMetricsTieBreakers>
 </document>
