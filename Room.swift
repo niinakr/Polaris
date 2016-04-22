@@ -1,9 +1,9 @@
 //
 //  Room.swift
-//  PolarisApp
+//  
 //
-//  Created by Niina Kristiina on 20/04/16.
-//  Copyright © 2016 Niina Kristiina. All rights reserved.
+//  Created by iosdev on 22.4.2016.
+//
 //
 
 import Foundation

@@ -1,9 +1,9 @@
 //
 //  Favourites+CoreDataProperties.swift
-//  PolarisApp
+//  
 //
-//  Created by Niina Kristiina on 11/04/16.
-//  Copyright © 2016 Niina Kristiina. All rights reserved.
+//  Created by iosdev on 22.4.2016.
+//
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
 //  to delete and recreate this implementation file for your updated model.
@@ -14,6 +14,7 @@ import CoreData
 
 extension Favourites {
 
-    @NSManaged var favouriteplace: String?
+    @NSManaged var favouriteName: String?
+    @NSManaged var favourLocation: Location?
 
 }

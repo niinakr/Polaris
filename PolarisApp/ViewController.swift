@@ -240,13 +240,18 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
         
         let fetchLocationRequest = EILRequestFetchLocation(locationIdentifier: "my-classroom")
         fetchLocationRequest.sendRequestWithCompletion { (location, error) in
-            if location != nil {
-                self.location = location!
+            if let location = location {
+                self.location = location
+                self.locationView.backgroundColor = UIColor.clearColor()
+                self.locationView.showTrace = false
+                self.locationView.traceColor = UIColor.brownColor()
                // self.locationView.showTrace = true
                 self.locationView.rotateOnPositionUpdate = false
+                self.locationView.locationBorderColor = UIColor.darkGrayColor()
+                self.locationView.locationBorderThickness = 2
                 
                 
-                self.locationView.drawLocation(location!)
+                self.locationView.drawLocation(location) //draw your location
                 
                 self.locationManager.startPositionUpdatesForLocation(self.location)
             } else {
@@ -257,7 +262,7 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
         
         if let s = favourite {
             
-            searchView.text = s.favouriteplace
+            searchView.text = s.favouriteName
         }
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action:Selector("dismissKeyboard"))

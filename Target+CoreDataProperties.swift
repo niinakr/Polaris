@@ -1,5 +1,5 @@
 //
-//  Beacons+CoreDataProperties.swift
+//  Target+CoreDataProperties.swift
 //  
 //
 //  Created by iosdev on 22.4.2016.
@@ -12,13 +12,13 @@
 import Foundation
 import CoreData
 
-extension Beacons {
+extension Target {
 
-    @NSManaged var accuracy: NSNumber?
-    @NSManaged var major: NSNumber?
-    @NSManaged var minor: NSNumber?
+    @NSManaged var beaconUUID: String?
+    @NSManaged var email: String?
+    @NSManaged var gender: String?
     @NSManaged var name: String?
-    @NSManaged var uuid: NSNumber?
-    @NSManaged var beaconLocation: Location?
+    @NSManaged var type: String?
+    @NSManaged var targetLocation: Location?
 
 }

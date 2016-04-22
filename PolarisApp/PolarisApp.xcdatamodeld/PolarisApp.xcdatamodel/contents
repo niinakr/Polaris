@@ -1,43 +1,46 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Automatic">
-    <entity name="Beacons" representedClassName=".Beacons" syncable="YES">
-        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="major" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="minor" optional="YES" attributeType="String" syncable="YES"/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D21" minimumToolsVersion="Automatic">
+    <entity name="Beacon" representedClassName=".Beacons" syncable="YES">
+        <attribute name="accuracy" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="major" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="minor" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="beacon_Room" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Room" inverseName="room_Beacon" inverseEntity="Room" syncable="YES"/>
-        <relationship name="beacon_Student" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Student" inverseName="student_Beacon" inverseEntity="Student" syncable="YES"/>
-        <relationship name="beacon_Teacher" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Teacher" inverseName="teacher_Beacon" inverseEntity="Teacher" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="beaconLocation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="locationBeacon" inverseEntity="Location" syncable="YES"/>
     </entity>
-    <entity name="Favourites" representedClassName=".Favourites" syncable="YES">
-        <attribute name="favouriteplace" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="favour_Room" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Room" syncable="YES"/>
+    <entity name="Favourite" representedClassName=".Favourites" syncable="YES">
+        <attribute name="favouriteName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="favourLocation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="locationFavourite" inverseEntity="Location" syncable="YES"/>
+    </entity>
+    <entity name="Location" representedClassName=".Location" syncable="YES">
+        <attribute name="favourite" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="x" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="y" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="locationBeacon" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Beacon" inverseName="beaconLocation" inverseEntity="Beacon" syncable="YES"/>
+        <relationship name="locationFavourite" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Favourite" inverseName="favourLocation" inverseEntity="Favourite" syncable="YES"/>
+        <relationship name="locationRoom" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Room" inverseName="roomLocation" inverseEntity="Room" syncable="YES"/>
+        <relationship name="locationTarget" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Target" inverseName="targetLocation" inverseEntity="Target" syncable="YES"/>
     </entity>
     <entity name="Room" representedClassName=".Room" syncable="YES">
-        <attribute name="beaconUUID" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="roomName" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="room_Beacon" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Beacons" inverseName="beacon_Room" inverseEntity="Beacons" syncable="YES"/>
-        <relationship name="room_Teacher" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Teacher" inverseName="teacher_room" inverseEntity="Teacher" syncable="YES"/>
-    </entity>
-    <entity name="Student" syncable="YES">
-        <attribute name="gender" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="major" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="year" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <relationship name="student_Beacon" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Beacons" inverseName="beacon_Student" inverseEntity="Beacons" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="roomLocation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="locationRoom" inverseEntity="Location" syncable="YES"/>
     </entity>
-    <entity name="Teacher" syncable="YES">
+    <entity name="Target" representedClassName=".Target" syncable="YES">
         <attribute name="beaconUUID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="nameTeacher" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="teacher_Beacon" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Beacons" inverseName="beacon_Teacher" inverseEntity="Beacons" syncable="YES"/>
-        <relationship name="teacher_room" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Room" inverseName="room_Teacher" inverseEntity="Room" syncable="YES"/>
+        <attribute name="gender" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="targetLocation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="locationTarget" inverseEntity="Location" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Beacons" positionX="-36" positionY="45" width="128" height="150"/>
-        <element name="Favourites" positionX="-9" positionY="72" width="128" height="75"/>
-        <element name="Room" positionX="-9" positionY="81" width="128" height="105"/>
-        <element name="Student" positionX="0" positionY="90" width="128" height="120"/>
-        <element name="Teacher" positionX="9" positionY="99" width="128" height="120"/>
+        <element name="Beacon" positionX="-216" positionY="101" width="128" height="133"/>
+        <element name="Favourite" positionX="-74" positionY="344" width="128" height="73"/>
+        <element name="Target" positionX="241" positionY="371" width="128" height="133"/>
+        <element name="Location" positionX="-9" positionY="108" width="128" height="178"/>
+        <element name="Room" positionX="205" positionY="135" width="128" height="88"/>
     </elements>
 </model>

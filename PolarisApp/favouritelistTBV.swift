@@ -18,7 +18,7 @@ class favouritelistTBV: UITableViewController {
     
     override func viewDidAppear(animated: Bool) {
         
-        let request = NSFetchRequest(entityName: "Favourites")
+        let request = NSFetchRequest(entityName: "Favourite")
         
         do {
             
@@ -48,7 +48,7 @@ class favouritelistTBV: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
         
         let favourite = favourites[indexPath.row]
-        cell.textLabel?.text = favourite.favouriteplace
+        cell.textLabel?.text = favourite.favouriteName
         cell.textLabel!.textColor = UIColor.whiteColor()
         
         return cell

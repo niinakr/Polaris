@@ -9,13 +9,7 @@
 /* Begin PBXBuildFile section */
 		277ACCF5A8C6EF6070CB5704 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0495908A0C4D8A24C5B3E90 /* libPods.a */; };
 		3E37AC8B1CC52F560044E469 /* MyCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E37AC8A1CC52F560044E469 /* MyCustomButton.swift */; };
-		3E54EBCC1CC75FB9003A115E /* Beacons+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E54EBCA1CC75FB9003A115E /* Beacons+CoreDataProperties.swift */; };
-		3E54EBCD1CC75FB9003A115E /* Beacons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E54EBCB1CC75FB9003A115E /* Beacons.swift */; };
-		3E54EBD01CC788C3003A115E /* Room+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E54EBCE1CC788C3003A115E /* Room+CoreDataProperties.swift */; };
-		3E54EBD11CC788C3003A115E /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E54EBCF1CC788C3003A115E /* Room.swift */; };
 		3E9AB1C51CBBC6BA004C38E8 /* favouritelistTBV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9AB1C41CBBC6BA004C38E8 /* favouritelistTBV.swift */; };
-		3E9AB1CC1CBBCEDF004C38E8 /* Favourites+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9AB1CA1CBBCEDF004C38E8 /* Favourites+CoreDataProperties.swift */; };
-		3E9AB1CD1CBBCEDF004C38E8 /* Favourites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9AB1CB1CBBCEDF004C38E8 /* Favourites.swift */; };
 		3E9AB1D11CBD014A004C38E8 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E9AB1D01CBD014A004C38E8 /* Launch Screen.storyboard */; };
 		3EE744E51CB78E88004D0AEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE744E41CB78E88004D0AEF /* AppDelegate.swift */; };
 		3EE744E71CB78E88004D0AEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE744E61CB78E88004D0AEF /* ViewController.swift */; };
@@ -28,6 +22,16 @@
 		3EE745161CBAB7E6004D0AEF /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE745151CBAB7E6004D0AEF /* DataController.swift */; };
 		3EE745181CBAB9B3004D0AEF /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE745171CBAB9B3004D0AEF /* Mapbox.framework */; };
 		3EE745191CBAB9B3004D0AEF /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE745171CBAB9B3004D0AEF /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6AB45CD71CCA0A6C0054ED00 /* Room+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB45CCD1CCA0A6C0054ED00 /* Room+CoreDataProperties.swift */; };
+		6AB45CD81CCA0A6C0054ED00 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB45CCE1CCA0A6C0054ED00 /* Room.swift */; };
+		6AB45CD91CCA0A6C0054ED00 /* Target+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB45CCF1CCA0A6C0054ED00 /* Target+CoreDataProperties.swift */; };
+		6AB45CDA1CCA0A6C0054ED00 /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB45CD01CCA0A6C0054ED00 /* Target.swift */; };
+		6AB45CDB1CCA0A6C0054ED00 /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB45CD11CCA0A6C0054ED00 /* Location+CoreDataProperties.swift */; };
+		6AB45CDC1CCA0A6C0054ED00 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB45CD21CCA0A6C0054ED00 /* Location.swift */; };
+		6AB45CDD1CCA0A6C0054ED00 /* Favourites+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB45CD31CCA0A6C0054ED00 /* Favourites+CoreDataProperties.swift */; };
+		6AB45CDE1CCA0A6C0054ED00 /* Favourites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB45CD41CCA0A6C0054ED00 /* Favourites.swift */; };
+		6AB45CDF1CCA0A6C0054ED00 /* Beacons+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB45CD51CCA0A6C0054ED00 /* Beacons+CoreDataProperties.swift */; };
+		6AB45CE01CCA0A6C0054ED00 /* Beacons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB45CD61CCA0A6C0054ED00 /* Beacons.swift */; };
 		6AEEB6001CC7A58F00FE341B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEEB5FF1CC7A58F00FE341B /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,13 +68,7 @@
 
 /* Begin PBXFileReference section */
 		3E37AC8A1CC52F560044E469 /* MyCustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomButton.swift; sourceTree = "<group>"; };
-		3E54EBCA1CC75FB9003A115E /* Beacons+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Beacons+CoreDataProperties.swift"; path = "../Beacons+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		3E54EBCB1CC75FB9003A115E /* Beacons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Beacons.swift; path = ../Beacons.swift; sourceTree = "<group>"; };
-		3E54EBCE1CC788C3003A115E /* Room+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Room+CoreDataProperties.swift"; path = "../Room+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		3E54EBCF1CC788C3003A115E /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Room.swift; path = ../Room.swift; sourceTree = "<group>"; };
 		3E9AB1C41CBBC6BA004C38E8 /* favouritelistTBV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = favouritelistTBV.swift; sourceTree = "<group>"; };
-		3E9AB1CA1CBBCEDF004C38E8 /* Favourites+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Favourites+CoreDataProperties.swift"; path = "../Favourites+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		3E9AB1CB1CBBCEDF004C38E8 /* Favourites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Favourites.swift; path = ../Favourites.swift; sourceTree = "<group>"; };
 		3E9AB1D01CBD014A004C38E8 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		3EE744E11CB78E87004D0AEF /* PolarisApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PolarisApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EE744E41CB78E88004D0AEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +87,17 @@
 		3EE745151CBAB7E6004D0AEF /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		3EE745171CBAB9B3004D0AEF /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapbox.framework; sourceTree = "<group>"; };
 		3F80A71B5055177E7D9434BD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		6AB45CCD1CCA0A6C0054ED00 /* Room+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Room+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6AB45CCE1CCA0A6C0054ED00 /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		6AB45CCF1CCA0A6C0054ED00 /* Target+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Target+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6AB45CD01CCA0A6C0054ED00 /* Target.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Target.swift; sourceTree = "<group>"; };
+		6AB45CD11CCA0A6C0054ED00 /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6AB45CD21CCA0A6C0054ED00 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		6AB45CD31CCA0A6C0054ED00 /* Favourites+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Favourites+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6AB45CD41CCA0A6C0054ED00 /* Favourites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Favourites.swift; sourceTree = "<group>"; };
+		6AB45CD51CCA0A6C0054ED00 /* Beacons+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Beacons+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6AB45CD61CCA0A6C0054ED00 /* Beacons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beacons.swift; sourceTree = "<group>"; };
+		6AB45CE11CCA0A890054ED00 /* ObjCBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCBridge.h; sourceTree = "<group>"; };
 		6AEEB5FF1CC7A58F00FE341B /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		836CABC3954045544DEAD265 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B0495908A0C4D8A24C5B3E90 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +133,17 @@
 		3EE744D81CB78E87004D0AEF = {
 			isa = PBXGroup;
 			children = (
+				6AB45CE11CCA0A890054ED00 /* ObjCBridge.h */,
+				6AB45CCD1CCA0A6C0054ED00 /* Room+CoreDataProperties.swift */,
+				6AB45CCE1CCA0A6C0054ED00 /* Room.swift */,
+				6AB45CCF1CCA0A6C0054ED00 /* Target+CoreDataProperties.swift */,
+				6AB45CD01CCA0A6C0054ED00 /* Target.swift */,
+				6AB45CD11CCA0A6C0054ED00 /* Location+CoreDataProperties.swift */,
+				6AB45CD21CCA0A6C0054ED00 /* Location.swift */,
+				6AB45CD31CCA0A6C0054ED00 /* Favourites+CoreDataProperties.swift */,
+				6AB45CD41CCA0A6C0054ED00 /* Favourites.swift */,
+				6AB45CD51CCA0A6C0054ED00 /* Beacons+CoreDataProperties.swift */,
+				6AB45CD61CCA0A6C0054ED00 /* Beacons.swift */,
 				3EE745171CBAB9B3004D0AEF /* Mapbox.framework */,
 				3EE744E31CB78E88004D0AEF /* PolarisApp */,
 				3EE744FB1CB78E88004D0AEF /* PolarisAppTests */,
@@ -147,12 +167,6 @@
 		3EE744E31CB78E88004D0AEF /* PolarisApp */ = {
 			isa = PBXGroup;
 			children = (
-				3E54EBCE1CC788C3003A115E /* Room+CoreDataProperties.swift */,
-				3E54EBCF1CC788C3003A115E /* Room.swift */,
-				3E54EBCA1CC75FB9003A115E /* Beacons+CoreDataProperties.swift */,
-				3E54EBCB1CC75FB9003A115E /* Beacons.swift */,
-				3E9AB1CB1CBBCEDF004C38E8 /* Favourites.swift */,
-				3E9AB1CA1CBBCEDF004C38E8 /* Favourites+CoreDataProperties.swift */,
 				3EE744E41CB78E88004D0AEF /* AppDelegate.swift */,
 				3EE744E61CB78E88004D0AEF /* ViewController.swift */,
 				6AEEB5FF1CC7A58F00FE341B /* MapViewController.swift */,
@@ -391,16 +405,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AB45CD71CCA0A6C0054ED00 /* Room+CoreDataProperties.swift in Sources */,
 				3EE744ED1CB78E88004D0AEF /* PolarisApp.xcdatamodeld in Sources */,
-				3E54EBD01CC788C3003A115E /* Room+CoreDataProperties.swift in Sources */,
-				3E54EBD11CC788C3003A115E /* Room.swift in Sources */,
-				3E54EBCC1CC75FB9003A115E /* Beacons+CoreDataProperties.swift in Sources */,
-				3E9AB1CD1CBBCEDF004C38E8 /* Favourites.swift in Sources */,
-				3E9AB1CC1CBBCEDF004C38E8 /* Favourites+CoreDataProperties.swift in Sources */,
+				6AB45CE01CCA0A6C0054ED00 /* Beacons.swift in Sources */,
+				6AB45CDF1CCA0A6C0054ED00 /* Beacons+CoreDataProperties.swift in Sources */,
 				6AEEB6001CC7A58F00FE341B /* MapViewController.swift in Sources */,
+				6AB45CDD1CCA0A6C0054ED00 /* Favourites+CoreDataProperties.swift in Sources */,
 				3E9AB1C51CBBC6BA004C38E8 /* favouritelistTBV.swift in Sources */,
-				3E54EBCD1CC75FB9003A115E /* Beacons.swift in Sources */,
+				6AB45CD91CCA0A6C0054ED00 /* Target+CoreDataProperties.swift in Sources */,
 				3E37AC8B1CC52F560044E469 /* MyCustomButton.swift in Sources */,
+				6AB45CDC1CCA0A6C0054ED00 /* Location.swift in Sources */,
+				6AB45CD81CCA0A6C0054ED00 /* Room.swift in Sources */,
+				6AB45CDA1CCA0A6C0054ED00 /* Target.swift in Sources */,
+				6AB45CDE1CCA0A6C0054ED00 /* Favourites.swift in Sources */,
+				6AB45CDB1CCA0A6C0054ED00 /* Location+CoreDataProperties.swift in Sources */,
 				3EE745161CBAB7E6004D0AEF /* DataController.swift in Sources */,
 				3EE744E71CB78E88004D0AEF /* ViewController.swift in Sources */,
 				3EE744E51CB78E88004D0AEF /* AppDelegate.swift in Sources */,
