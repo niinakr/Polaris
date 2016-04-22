@@ -127,6 +127,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E0D9FA41CCA38DF00AC4831 /* SWRevealController */ = {
+			isa = PBXGroup;
+			children = (
+				3EF7CD161CCA0FD500A68F5E /* SWRevealViewController.m */,
+				3EF7CD191CCA10A400A68F5E /* PolarisApp-Bridging-Header.h */,
+				3EF7CD151CCA0FD500A68F5E /* SWRevealViewController.h */,
+			);
+			name = SWRevealController;
+			sourceTree = "<group>";
+		};
+		3E0D9FA51CCA390900AC4831 /* Menubar */ = {
+			isa = PBXGroup;
+			children = (
+				3E0D9FA21CCA381200AC4831 /* MenubarVC.swift */,
+				3E0D9FA41CCA38DF00AC4831 /* SWRevealController */,
+			);
+			name = Menubar;
+			sourceTree = "<group>";
+		};
+		3E0D9FA61CCA391B00AC4831 /* Core data */ = {
+			isa = PBXGroup;
+			children = (
+				3E9AB1CA1CBBCEDF004C38E8 /* Favourites+CoreDataProperties.swift */,
+				3E9AB1CB1CBBCEDF004C38E8 /* Favourites.swift */,
+				3E54EBCB1CC75FB9003A115E /* Beacons.swift */,
+				3E54EBCA1CC75FB9003A115E /* Beacons+CoreDataProperties.swift */,
+				3E54EBCF1CC788C3003A115E /* Room.swift */,
+				3E54EBCE1CC788C3003A115E /* Room+CoreDataProperties.swift */,
+			);
+			name = "Core data";
+			sourceTree = "<group>";
+		};
+		3E0D9FA71CCA393B00AC4831 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				3E37AC8A1CC52F560044E469 /* MyCustomButton.swift */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
 		3EE744D81CB78E87004D0AEF = {
 			isa = PBXGroup;
 			children = (
@@ -153,15 +193,9 @@
 		3EE744E31CB78E88004D0AEF /* PolarisApp */ = {
 			isa = PBXGroup;
 			children = (
-				3E54EBCE1CC788C3003A115E /* Room+CoreDataProperties.swift */,
-				3EF7CD151CCA0FD500A68F5E /* SWRevealViewController.h */,
-				3EF7CD161CCA0FD500A68F5E /* SWRevealViewController.m */,
-				3EF7CD191CCA10A400A68F5E /* PolarisApp-Bridging-Header.h */,
-				3E54EBCF1CC788C3003A115E /* Room.swift */,
-				3E54EBCA1CC75FB9003A115E /* Beacons+CoreDataProperties.swift */,
-				3E54EBCB1CC75FB9003A115E /* Beacons.swift */,
-				3E9AB1CB1CBBCEDF004C38E8 /* Favourites.swift */,
-				3E9AB1CA1CBBCEDF004C38E8 /* Favourites+CoreDataProperties.swift */,
+				3E0D9FA71CCA393B00AC4831 /* UI */,
+				3E0D9FA61CCA391B00AC4831 /* Core data */,
+				3E0D9FA51CCA390900AC4831 /* Menubar */,
 				3EE744E41CB78E88004D0AEF /* AppDelegate.swift */,
 				3EE744E61CB78E88004D0AEF /* ViewController.swift */,
 				6AEEB5FF1CC7A58F00FE341B /* MapViewController.swift */,
@@ -173,8 +207,6 @@
 				3EE744EB1CB78E88004D0AEF /* PolarisApp.xcdatamodeld */,
 				3EE745151CBAB7E6004D0AEF /* DataController.swift */,
 				3E9AB1D01CBD014A004C38E8 /* Launch Screen.storyboard */,
-				3E37AC8A1CC52F560044E469 /* MyCustomButton.swift */,
-				3E0D9FA21CCA381200AC4831 /* MenubarVC.swift */,
 			);
 			path = PolarisApp;
 			sourceTree = "<group>";

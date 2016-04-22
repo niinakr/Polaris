@@ -237,6 +237,8 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
         Menu.target = self.revealViewController()
         Menu.action = Selector("revealToggle:")
         
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        
         self.locationManager.delegate = self
         
         //myMap.drawMap()
