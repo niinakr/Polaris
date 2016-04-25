@@ -118,6 +118,7 @@
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveData:" destination="d4J-yM-nhA" eventType="touchUpInside" id="2A3-rW-c8y"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="segueAvatar" id="3Zz-Yg-tcL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -310,6 +311,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="Avatar_name" destination="shG-Ro-Z5W" id="tmw-nv-e5a"/>
                         <outlet property="Menu" destination="8pZ-vR-YcN" id="jID-yt-n9Z"/>
                         <outlet property="locationView" destination="svc-MD-Szc" id="PBu-Hm-NMj"/>
                         <outlet property="myLocationView" destination="svc-MD-Szc" id="J6g-7i-nN0"/>
@@ -370,6 +372,6 @@
         <image name="star2" width="43" height="43"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="q4w-Pg-aYU"/>
+        <segue reference="3Zz-Yg-tcL"/>
     </inferredMetricsTieBreakers>
 </document>

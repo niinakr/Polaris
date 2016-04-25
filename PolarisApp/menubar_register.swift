@@ -12,11 +12,13 @@ import CoreData
 class menubar_register: UIViewController {
   
     @IBOutlet weak var avatar: UITextField!
-
+    var toPass:String!
     
 
     override func viewDidLoad() {
+        avatar.text = toPass
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        
     }
     
     @IBAction func saveData(sender: UIButton) {

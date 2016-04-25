@@ -22,6 +22,8 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
     
     @IBOutlet weak var positionLabel: UILabel!
     
+    @IBOutlet weak var Avatar_name: UILabel!
+    
     var favourite:Favourites?
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
@@ -251,10 +253,11 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        
         Menu.target = self.revealViewController()
         Menu.action = #selector(SWRevealViewController.revealToggle(_:))
         
-        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
         self.locationManager.delegate = self
         
@@ -323,6 +326,18 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
         
 
         // Dispose of any resources that can be recreated.
+    }
+    
+    //pass the avatarseque from menubar_register
+    
+    override func prepareForSegue(segue: (UIStoryboardSegue!), sender: AnyObject!) {
+        if (segue.identifier == "segueAvatar") {
+            print("avatarsegue")
+            let svc = segue.destinationViewController as! menubar_register;
+            
+            svc.toPass = Avatar_name.text
+            
+        }
     }
     
     
