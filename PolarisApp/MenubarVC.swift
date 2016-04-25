@@ -14,7 +14,7 @@ class MenubarVC: UITableViewController {
     var tableArray = [String]()
     
     override func viewDidLoad() {
-        tableArray = ["Beacons","Rooms", "Homepage"]
+        tableArray = ["Beacons","Register", "Homepage"]
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

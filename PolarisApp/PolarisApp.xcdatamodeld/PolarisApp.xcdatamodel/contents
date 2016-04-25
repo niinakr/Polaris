@@ -33,11 +33,15 @@
         <relationship name="teacher_Beacon" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Beacons" inverseName="beacon_Teacher" inverseEntity="Beacons" syncable="YES"/>
         <relationship name="teacher_room" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Room" inverseName="room_Teacher" inverseEntity="Room" syncable="YES"/>
     </entity>
+    <entity name="User" representedClassName=".PolarisAppUser" syncable="YES">
+        <attribute name="avatar_name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
         <element name="Beacons" positionX="-36" positionY="45" width="128" height="150"/>
         <element name="Favourites" positionX="-9" positionY="72" width="128" height="75"/>
         <element name="Room" positionX="-9" positionY="81" width="128" height="105"/>
         <element name="Student" positionX="0" positionY="90" width="128" height="120"/>
         <element name="Teacher" positionX="9" positionY="99" width="128" height="120"/>
+        <element name="User" positionX="-9" positionY="117" width="128" height="60"/>
     </elements>
 </model>

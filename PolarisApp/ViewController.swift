@@ -18,6 +18,9 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
     
     @IBOutlet weak var searchView: UISearchBar!
     
+    @IBOutlet weak var myLocationView: EILIndoorLocationView!
+    
+    @IBOutlet weak var positionLabel: UILabel!
     
     var favourite:Favourites?
     
@@ -60,9 +63,16 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
 
         
     }
-    
+   
     @IBAction func selfPosition(sender: AnyObject) {
     print("position button pressed")
+        positionLabel.text = (" Your Location")
+       
+//        positionLabel.text = NSString(format: "x: %.2f, y: %.2f, a: %.2f",
+//        position.x
+//        position.y
+//        position.oriantation)
+//    
         
     }
     
@@ -224,9 +234,16 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
             case .VeryLow:  accuracy = "+/- ? :-("
             case .Unknown:  accuracy = "unknown"
             }
-            print(String(format: "x: %5.2f, y: %5.2f, orientation: %3.0f, accuracy: %@",
-                position.x, position.y, position.orientation, accuracy))
-            
+             positionLabel.text =  NSString(format: "x: %5.2f, y: %5.2f, orientation: %3.0f, accuracy: %@",
+                position.x, position.y, position.orientation, accuracy) as String
+        
+        
+        //        positionLabel.text = NSString(format: "x: %.2f, y: %.2f, a: %.2f",
+        //        position.x
+        //        position.y
+        //        position.oriantation)
+        
+        
             self.locationView.updatePosition(position)
     }
     
@@ -235,7 +252,7 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
         super.viewDidLoad()
         
         Menu.target = self.revealViewController()
-        Menu.action = Selector("revealToggle:")
+        Menu.action = #selector(SWRevealViewController.revealToggle(_:))
         
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
@@ -267,7 +284,7 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
             searchView.text = s.favouriteplace
         }
         
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action:Selector("dismissKeyboard"))
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action:#selector(ViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view, typically from a nib.
         
