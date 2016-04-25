@@ -11,11 +11,13 @@ import MapKit
 import CoreData
 
 
+
 class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationManagerDelegate {
     
-    
+    @IBOutlet weak var Menu: UIBarButtonItem!
     
     @IBOutlet weak var searchView: UISearchBar!
+    
     
     var favourite:Favourites?
     
@@ -231,6 +233,11 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Menu.target = self.revealViewController()
+        Menu.action = Selector("revealToggle:")
+        
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
         self.locationManager.delegate = self
         
