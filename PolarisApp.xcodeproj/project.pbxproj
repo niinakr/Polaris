@@ -609,7 +609,7 @@
 				INFOPLIST_FILE = PolarisApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = BangNguyen.PolarisApp;
+				PRODUCT_BUNDLE_IDENTIFIER = niinakristiina.PolarisApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = ObjCBridge.h;
@@ -631,7 +631,7 @@
 				INFOPLIST_FILE = PolarisApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = BangNguyen.PolarisApp;
+				PRODUCT_BUNDLE_IDENTIFIER = niinakristiina.PolarisApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = ObjCBridge.h;
