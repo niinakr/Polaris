@@ -32,6 +32,7 @@
 		6AB45CE01CCA0A6C0054ED00 /* Beacons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB45CD61CCA0A6C0054ED00 /* Beacons.swift */; };
 		6AB45CE41CCA0DC80054ED00 /* Room+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB45CE21CCA0DC80054ED00 /* Room+CoreDataProperties.swift */; };
 		6AB45CE51CCA0DC80054ED00 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB45CE31CCA0DC80054ED00 /* Room.swift */; };
+		6AB45CE71CCE093D0054ED00 /* Location.json in Resources */ = {isa = PBXBuildFile; fileRef = 6AB45CE61CCE093C0054ED00 /* Location.json */; };
 		6AEEB6001CC7A58F00FE341B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEEB5FF1CC7A58F00FE341B /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +99,7 @@
 		6AB45CE11CCA0A890054ED00 /* ObjCBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCBridge.h; sourceTree = "<group>"; };
 		6AB45CE21CCA0DC80054ED00 /* Room+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Room+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		6AB45CE31CCA0DC80054ED00 /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		6AB45CE61CCE093C0054ED00 /* Location.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Location.json; sourceTree = "<group>"; };
 		6AEEB5FF1CC7A58F00FE341B /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		836CABC3954045544DEAD265 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B0495908A0C4D8A24C5B3E90 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +173,7 @@
 				3EE744E61CB78E88004D0AEF /* ViewController.swift */,
 				6AEEB5FF1CC7A58F00FE341B /* MapViewController.swift */,
 				3EE744E81CB78E88004D0AEF /* Main.storyboard */,
+				6AB45CE61CCE093C0054ED00 /* Location.json */,
 				3E9AB1C41CBBC6BA004C38E8 /* favouritelistTBV.swift */,
 				3EE744EE1CB78E88004D0AEF /* Assets.xcassets */,
 				3EE744F01CB78E88004D0AEF /* LaunchScreen.storyboard */,
@@ -332,6 +335,7 @@
 				3EE744F21CB78E88004D0AEF /* LaunchScreen.storyboard in Resources */,
 				3EE744EF1CB78E88004D0AEF /* Assets.xcassets in Resources */,
 				3E9AB1D11CBD014A004C38E8 /* Launch Screen.storyboard in Resources */,
+				6AB45CE71CCE093D0054ED00 /* Location.json in Resources */,
 				3EE744EA1CB78E88004D0AEF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,11 +11,18 @@ import MapKit
 import CoreData
 
 
-class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationManagerDelegate {
-    
-    
+class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationManagerDelegate  {
     
     @IBOutlet weak var searchView: UISearchBar!
+    @IBOutlet weak var locationView: EILIndoorLocationView!
+    
+    @IBAction func infoClassroomA(sender: UIButton) {
+        
+       let text = "Course: \n Mobile Application Development \n ID: TX00CE69-3001"
+        let alert1 = UIAlertController(title: "Room ETYB304", message: text, preferredStyle: UIAlertControllerStyle.Alert)
+        alert1.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert1, animated: true, completion: nil)
+    }
     
     var favourite:Favourites?
     let locationManager = EILIndoorLocationManager()
@@ -23,11 +30,18 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
     var currentPosition : EILOrientedPoint!
     var navigationLayer: CAShapeLayer!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Create the path to our JSON file
+        let jsonFile = NSBundle.mainBundle().pathForResource("Location", ofType: "json")
+        let jsonData = NSData(contentsOfFile: jsonFile!)
+        //let locationSetup = EILLocationBuilder.parseFromJSON(jsonData)
+        
+        //self.view.bringSubviewToFront(infoClassroomA(UIButton))
+        
         self.locationManager.delegate = self
-
         ESTConfig.setupAppID("polarisapp-jdk", andAppToken: "42a557a97b7838d4741205f03705c1de")
         
         let fetchLocationRequest = EILRequestFetchLocation(locationIdentifier: "my-classroom")
@@ -35,12 +49,18 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
             if let location = location {
                 self.location = location
                 self.locationView.backgroundColor = UIColor.clearColor()
-                self.locationView.showTrace = false
+                self.locationView.showTrace = true
                 self.locationView.traceColor = UIColor.brownColor()
+                self.locationView.traceThickness = 2
+                self.locationView.showWallLengthLabels = true
+                self.locationView.wallLengthLabelsColor = UIColor.blackColor()
+                self.locationView.doorColor = UIColor.redColor()
+                self.locationView.doorThickness = 5
                 self.locationView.rotateOnPositionUpdate = false
                 self.locationView.locationBorderColor = UIColor.darkGrayColor()
                 self.locationView.locationBorderThickness = 3
-                self.locationView.drawLocation(location) //draw your location
+                //draw your location
+                self.locationView.drawLocation(location)
                 
                 self.locationManager.startPositionUpdatesForLocation(self.location)
             } else {
@@ -49,31 +69,18 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
         }
         
         if let s = favourite {
-            
             searchView.text = s.favouriteName
         }
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action:Selector("dismissKeyboard"))
         view.addGestureRecognizer(tap)
-        //// Do any additional setup after loading the view, typically from a nib.
-        
-        //add rooms as core data
-        
-        //reference to appDelegate
-        //        let appdel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-        //        //reference to context
-        //        let context: NSManagedObjectContext = appdel.managedObjectContext
-        //        // save data from beacons
-        //        let newroom1 = NSEntityDescription.insertNewObjectForEntityForName("Room", inManagedObjectContext: context) as NSManagedObject
-        //        newroom1.setValue("test1", forKey: "roomName")
-        //        newroom1.setValue("2222", forKey: "beaconUUID")
-        //        let newroom2 = NSEntityDescription.insertNewObjectForEntityForName("Room", inManagedObjectContext: context) as NSManagedObject
-        //        newroom2.setValue("test2", forKey: "roomName")
-        //        newroom2.setValue("3333", forKey: "beaconUUID")
-        //
-        //
     }
     
+    
+
+    override func viewWillAppear(animated: Bool){
+        
+    }
     //Calls this function when the tap is recognized.
     func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
@@ -85,15 +92,12 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
         // Dispose of any resources that can be recreated.
     }
     
-    @IBOutlet weak var locationView: EILIndoorLocationView!
-    
     func indoorLocationManager(manager: EILIndoorLocationManager, didFailToUpdatePositionWithError error: NSError) {
             print("failed to update position: \(error)")
     }
     
-    
     func updateNavigation() {
-        var path = UIBezierPath()
+        let path = UIBezierPath()
         let newPoint = locationView.calculatePicturePointFromRealPoint(currentPosition)
         path.moveToPoint(newPoint)
         let newPoint2 = locationView.calculatePicturePointFromRealPoint(EILOrientedPoint(x: 1.5, y: 1.5, orientation: 0))
@@ -125,8 +129,13 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
             case .VeryLow:  accuracy = "+/- ? :-("
             case .Unknown:  accuracy = "unknown"
             }
-            print(String(format: "x: %5.2f, y: %5.2f, orientation: %3.0f, accuracy: %@", position.x, position.y, position.orientation, accuracy))
+            print(String(format: "x: %5.2f, y: %5.2f, orientation: %3.0f, accuracy: %@",
+                position.x,
+                position.y,
+                position.orientation,
+                accuracy))
             currentPosition = position
+            
             self.locationView.updatePosition(position)
             updateNavigation()
     }
@@ -176,37 +185,41 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
         
     }
     
-    @IBAction func displayrooms(sender: AnyObject) {
-        print("displayrooms button pressed")
-        
-        //reference to appDelegate
-        let appdel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-        
-        
-        //reference to context
-        let context: NSManagedObjectContext = appdel.managedObjectContext
-        
-        
-        //Display the information from beacons
-        let request = NSFetchRequest(entityName: "Room")
-        request.returnsObjectsAsFaults = false;
-        
-        do {
-            let result: NSArray =  try context.executeFetchRequest(request)
-            if (result.count > 0) {
-                for res in result {
-                    print(res)
-                }
-            }
-            else {
-                print("0 results returned")
-            }
-        } catch{}
-        
-    }
+//    @IBAction func displayrooms(sender: AnyObject) {
+//        print("displayrooms button pressed")
+//        
+//        //reference to appDelegate
+//        let appdel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+//        
+//        
+//        //reference to context
+//        let context: NSManagedObjectContext = appdel.managedObjectContext
+//        
+//        
+//        //Display the information from beacons
+//        let request = NSFetchRequest(entityName: "Room")
+//        request.returnsObjectsAsFaults = false;
+//        
+//        do {
+//            let result: NSArray =  try context.executeFetchRequest(request)
+//            if (result.count > 0) {
+//                for res in result {
+//                    print(res)
+//                }
+//            }
+//            else {
+//                print("0 results returned")
+//            }
+//        } catch{}
+//        
+//    }
 
     
     @IBAction func displayfavourites() {
+//        
+//        let view = UIView.init(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+//        view.backgroundColor = UIColor.grayColor()
+//        self.view.addSubview(view)
         
         //reference to appDelegate
         let appdel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
@@ -246,8 +259,6 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
             newfavourite.setValue("" + searchView.text!, forKey: "favouriteName")
 
             try context.save()
-//            let a = UIAlertView(title: "Success", message: "Your favourite place is saved", delegate: nil, cancelButtonTitle: "OK")
-//            a.show()
             
             let a = UIAlertController(title: "Success", message: "Your favourite place is saved", preferredStyle: UIAlertControllerStyle.Alert)
             a.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
@@ -257,9 +268,6 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
         } catch {}
         }
         else {
-//            let b = UIAlertView(title: "Failed", message: "Type first something", delegate: nil, cancelButtonTitle: "OK")
-//            b.show()
-            
             let b = UIAlertController(title: "Failed", message: "Type first something", preferredStyle: UIAlertControllerStyle.Alert)
             b.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(b, animated: true, completion: nil)
@@ -267,6 +275,11 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
         }
     }
     
+    
+    let teacherOffice = EILPoint(x: 8.0, y: 1.0)
+//    if location.distanceToPoint
+    
+        
     
     //    @IBAction func displaybeacons(sender: AnyObject) {
     //        print("displaybeacons button pressed")

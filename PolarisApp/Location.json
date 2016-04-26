@@ -1,0 +1,81 @@
+{
+    "Beacon":[
+        "ice": {
+            "Identifier":"e2208d08b720",
+            "UUID":"B9407F30-F5F8-466E-AFF9-25556B57FE6D",
+            "Major":46880,
+            "Minor":36104
+        },
+              
+        "blueberry": {
+            "Identifier":"de0f1c1fe1e8",
+            "UUID":"B9407F30-F5F8-466E-AFF9-25556B57FE6D",
+            "Major":57832,
+            "Minor":7199
+        },
+              
+        "mint": {
+            "Identifier":"ce59e89bd34e",
+            "UUID":"B9407F30-F5F8-466E-AFF9-25556B57FE6D",
+            "Major":911,
+            "Minor":912
+        }
+    ],
+    
+    "Location":{
+        
+        "Classroom":[
+                "Room ETYB 304":{
+                    "X":"none",
+                    "Y":"none",
+                    "Beacon":"none"
+                },
+                "Room ETYB 303":{
+                    "X":"none",
+                    "Y":"none",
+                    "Beacon":"none"
+                }
+        ],
+        
+        "Office":[
+                "Teacher office":{
+                    "X":"none",
+                    "Y":"none",
+                    "Beacon":"none"
+                },
+                "Meeting room":{
+                    "X":"none",
+                    "Y":"none",
+                    "Beacon":"none"
+                }
+        ],
+        
+        "Teacher":[
+                "Peter":{
+                    "Gender": "Male",
+                    "Age": "XX",
+                    "Teaching Subjects": "XXX"
+                   },
+                "Petri":{
+                   "Gender": "Male",
+                   "Age": "XX",
+                   "Teaching Subjects": "XXX"
+                   },
+                "Merja":{
+                   "Gender": "Female",
+                   "Age": "XX",
+                   "Teaching Subjects": "XXX"
+                   },
+                "Ulla":{
+                   "Gender": "Female",
+                   "Age": "XX",
+                   "Teaching Subjects": "XXX"
+                }
+                
+        ],
+        
+        "Student":[
+            
+        ]
+    }
+}
