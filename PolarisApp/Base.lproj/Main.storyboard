@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,11 +14,19 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" misplaced="YES" placeholderIntrinsicWidth="297" placeholderIntrinsicHeight="44" text="Searching room name" showsBookmarkButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2wj-4Z-zJk">
-                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="svc-MD-Szc" customClass="EILIndoorLocationView">
+                                <rect key="frame" x="0.0" y="108" width="320" height="358"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="8JU-T2-nS8"/>
+                                    <constraint firstAttribute="height" constant="358" id="Oev-xZ-Cxn"/>
+                                </constraints>
+                            </view>
+                            <searchBar contentMode="redraw" placeholderIntrinsicWidth="297" placeholderIntrinsicHeight="44" text="Searching room name" showsBookmarkButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2wj-4Z-zJk">
+                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                                 <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="search"/>
                                 <scopeButtonTitles>
@@ -36,13 +43,8 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="8AX-Kq-hg6"/>
                                 </connections>
                             </searchBar>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSf-mk-8yE">
-                                <rect key="frame" x="335" y="73" width="31" height="27"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="27" id="Dxt-h8-c8r"/>
-                                    <constraint firstAttribute="width" secondItem="xSf-mk-8yE" secondAttribute="height" multiplier="31:27" id="JBY-wH-gC9"/>
-                                    <constraint firstAttribute="width" constant="31" id="fTA-gZ-t3I"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSf-mk-8yE">
+                                <rect key="frame" x="3" y="489" width="31" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" image="star2">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -51,12 +53,8 @@
                                     <action selector="addasfavourite" destination="BYZ-38-t0r" eventType="touchUpInside" id="rJr-f7-fmG"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="svc-MD-Szc" customClass="EILIndoorLocationView">
-                                <rect key="frame" x="0.0" y="108" width="375" height="437"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="159" placeholderIntrinsicHeight="62" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oV-LI-RyR" customClass="MyCustomButton" customModule="PolarisApp" customModuleProvider="target">
-                                <rect key="frame" x="196" y="553" width="159" height="62"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="159" placeholderIntrinsicHeight="62" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oV-LI-RyR" customClass="MyCustomButton" customModule="PolarisApp" customModuleProvider="target">
+                                <rect key="frame" x="166" y="483" width="154" height="33"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
                                 <state key="normal" title="Favourites">
@@ -67,50 +65,54 @@
                                     <segue destination="gFM-bo-RRW" kind="push" id="wct-yD-vTd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="159" placeholderIntrinsicHeight="62" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="headTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTm-H5-fAZ" customClass="MyCustomButton" customModule="PolarisApp" customModuleProvider="target">
-                                <rect key="frame" x="20" y="553" width="159" height="62"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
-                                <size key="titleShadowOffset" width="3" height="3"/>
-                                <state key="normal" title="Your Position">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dav-Wr-bwH">
+                                <rect key="frame" x="41" y="248" width="101" height="30"/>
+                                <state key="normal" title="Teacher Office"/>
                                 <connections>
-                                    <action selector="selfPosition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2qH-bh-FIu"/>
+                                    <action selector="infoTeacherOffice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mpy-tZ-nWS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNf-Pc-OkC">
-                                <rect key="frame" x="129" y="468" width="114" height="30"/>
-                                <state key="normal" title="Room ETYB304"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjm-sa-ZBr">
+                                <rect key="frame" x="37" y="164" width="105" height="30"/>
+                                <state key="normal" title="Meeting Room"/>
                                 <connections>
-                                    <action selector="infoClassroomA:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lTV-tf-0AS"/>
+                                    <action selector="infoMeetingRoom:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nzP-aL-aUa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJE-6s-7pD">
+                                <rect key="frame" x="195" y="210" width="79" height="30"/>
+                                <state key="normal" title="ETYB303"/>
+                                <connections>
+                                    <action selector="infoClassroomB:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yGz-w8-Asf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrU-TT-nin">
+                                <rect key="frame" x="114" y="341" width="81" height="30"/>
+                                <state key="normal" title="ETYB304"/>
+                                <connections>
+                                    <action selector="infoClassroomA:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IrX-SS-r8W"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="qTm-H5-fAZ" firstAttribute="top" secondItem="svc-MD-Szc" secondAttribute="bottom" constant="8" id="0LK-Hy-VkM"/>
                             <constraint firstItem="svc-MD-Szc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1Pl-Or-Sud"/>
-                            <constraint firstItem="1oV-LI-RyR" firstAttribute="height" secondItem="qTm-H5-fAZ" secondAttribute="height" id="1Y0-Dv-ZaN"/>
                             <constraint firstItem="svc-MD-Szc" firstAttribute="top" secondItem="2wj-4Z-zJk" secondAttribute="bottom" id="2wC-Dy-ZSZ"/>
                             <constraint firstItem="2wj-4Z-zJk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3Yh-oa-7FL"/>
-                            <constraint firstItem="1oV-LI-RyR" firstAttribute="width" secondItem="qTm-H5-fAZ" secondAttribute="width" id="GGV-QW-C7N"/>
-                            <constraint firstAttribute="trailing" secondItem="1oV-LI-RyR" secondAttribute="trailing" constant="20" id="Iz7-AI-6TA"/>
-                            <constraint firstItem="1oV-LI-RyR" firstAttribute="top" secondItem="svc-MD-Szc" secondAttribute="bottom" constant="8" id="Omx-Fm-H60"/>
+                            <constraint firstItem="svc-MD-Szc" firstAttribute="top" secondItem="2wj-4Z-zJk" secondAttribute="bottom" id="Du7-63-Gw6"/>
                             <constraint firstItem="svc-MD-Szc" firstAttribute="top" secondItem="2wj-4Z-zJk" secondAttribute="bottom" id="Rwf-4W-531"/>
                             <constraint firstItem="2wj-4Z-zJk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="US7-Bg-AzC"/>
-                            <constraint firstItem="qTm-H5-fAZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="YSu-Za-bgj"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qTm-H5-fAZ" secondAttribute="bottom" constant="8" id="Z7w-3S-5bu"/>
                             <constraint firstAttribute="trailing" secondItem="svc-MD-Szc" secondAttribute="trailing" id="bD7-oU-8ch"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1oV-LI-RyR" secondAttribute="bottom" constant="8" id="pwb-2I-T3f"/>
+                            <constraint firstAttribute="trailing" secondItem="2wj-4Z-zJk" secondAttribute="trailing" id="ba9-fy-G6I"/>
+                            <constraint firstItem="2wj-4Z-zJk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="bbz-JX-vHV"/>
+                            <constraint firstItem="2wj-4Z-zJk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rF7-C1-jxn"/>
                             <constraint firstAttribute="trailing" secondItem="2wj-4Z-zJk" secondAttribute="trailing" id="ve9-j6-HYT"/>
-                            <constraint firstAttribute="trailing" secondItem="xSf-mk-8yE" secondAttribute="trailing" constant="9" id="xo2-Hz-Wsn"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="b3Q-2u-rbe"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="locationView" destination="svc-MD-Szc" id="PBu-Hm-NMj"/>
                         <outlet property="searchView" destination="2wj-4Z-zJk" id="f4y-4G-Jdm"/>
@@ -120,7 +122,7 @@
                 <tapGestureRecognizer id="Wfw-RQ-Q3N"/>
                 <pinchGestureRecognizer id="h9f-uK-tty"/>
             </objects>
-            <point key="canvasLocation" x="493.5" y="376.5"/>
+            <point key="canvasLocation" x="242" y="332"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jRt-AW-Xed">

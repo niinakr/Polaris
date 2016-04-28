@@ -11,18 +11,11 @@ import MapKit
 import CoreData
 
 
-class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationManagerDelegate  {
+class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationManagerDelegate, UIPopoverPresentationControllerDelegate {
+    
     
     @IBOutlet weak var searchView: UISearchBar!
     @IBOutlet weak var locationView: EILIndoorLocationView!
-    
-    @IBAction func infoClassroomA(sender: UIButton) {
-        
-       let text = "Course: \n Mobile Application Development \n ID: TX00CE69-3001"
-        let alert1 = UIAlertController(title: "Room ETYB304", message: text, preferredStyle: UIAlertControllerStyle.Alert)
-        alert1.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-        self.presentViewController(alert1, animated: true, completion: nil)
-    }
     
     var favourite:Favourites?
     let locationManager = EILIndoorLocationManager()
@@ -30,16 +23,23 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
     var currentPosition : EILOrientedPoint!
     var navigationLayer: CAShapeLayer!
     
+    var classroomA = EILPoint(x: 4.0,y: 3.0)
+    var classroomB = EILPoint(x: 6.0,y: 7.0)
+    var teacherOffice = EILPoint(x: 2.0,y: 6.0)
+    var meetingRoom = EILPoint(x: 2.0,y: 8.0)
+    //var interPoint = EILPoint(x: 6.0, y: 4.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Drawing subroom
+        drawSubroom()
+        
         //Create the path to our JSON file
         let jsonFile = NSBundle.mainBundle().pathForResource("Location", ofType: "json")
         let jsonData = NSData(contentsOfFile: jsonFile!)
-        //let locationSetup = EILLocationBuilder.parseFromJSON(jsonData)
         
-        //self.view.bringSubviewToFront(infoClassroomA(UIButton))
+        
         
         self.locationManager.delegate = self
         ESTConfig.setupAppID("polarisapp-jdk", andAppToken: "42a557a97b7838d4741205f03705c1de")
@@ -49,19 +49,20 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
             if let location = location {
                 self.location = location
                 self.locationView.backgroundColor = UIColor.clearColor()
+                //Show tracing
                 self.locationView.showTrace = true
                 self.locationView.traceColor = UIColor.brownColor()
                 self.locationView.traceThickness = 2
+                //Config wall
                 self.locationView.showWallLengthLabels = true
-                self.locationView.wallLengthLabelsColor = UIColor.blackColor()
-                self.locationView.doorColor = UIColor.redColor()
-                self.locationView.doorThickness = 5
+                //self.locationView.wallLengthLabelsColor = UIColor.blackColor()
+                
                 self.locationView.rotateOnPositionUpdate = false
                 self.locationView.locationBorderColor = UIColor.darkGrayColor()
                 self.locationView.locationBorderThickness = 3
+                
                 //draw your location
                 self.locationView.drawLocation(location)
-                
                 self.locationManager.startPositionUpdatesForLocation(self.location)
             } else {
                 print("can't fetch location: \(error)")
@@ -75,16 +76,31 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action:Selector("dismissKeyboard"))
         view.addGestureRecognizer(tap)
     }
-    
-    
 
-    override func viewWillAppear(animated: Bool){
-        
-    }
+    
     //Calls this function when the tap is recognized.
     func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
+        
+    }
+    
+    func drawSubroom(){
+        let view1 = UIView.init(frame: CGRect(x: 22, y: 290, width: 190, height: 5))
+        view1.backgroundColor = UIColor.grayColor()
+        self.view.addSubview(view1)
+        
+        let view2 = UIView.init(frame: CGRect(x: 260, y: 290, width: 40, height: 5))
+        view2.backgroundColor = UIColor.grayColor()
+        self.view.addSubview(view2)
+        
+        let view3 = UIView.init(frame: CGRect(x: 150, y: 150, width: 5, height: 140))
+        view3.backgroundColor = UIColor.grayColor()
+        self.view.addSubview(view3)
+        
+        let view4 = UIView.init(frame: CGRect(x: 22, y: 220, width: 130, height: 5))
+        view4.backgroundColor = UIColor.grayColor()
+        self.view.addSubview(view4)
     }
     
     override func didReceiveMemoryWarning() {
@@ -96,18 +112,101 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
             print("failed to update position: \(error)")
     }
     
-    func updateNavigation() {
+    
+    func goToClassroomA(){
+        updateNavigation(classroomA)
+    }
+    
+    @IBAction func infoClassroomA(sender: UIButton) {
+        let text = "Course: \n Mobile Application Development \n ID: TX00CE69-3001"
+        let alert1 = UIAlertController(title: "Room ETYB304", message: text, preferredStyle: UIAlertControllerStyle.Alert)
+        alert1.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+        alert1.addAction(UIAlertAction(title: "Navigation", style: .Default, handler: { (action: UIAlertAction!) in self.goToClassroomA()
+        }))
+        self.presentViewController(alert1, animated: true, completion: nil)
+        
+    }
+    
+    func goToClassroomB(){
+        updateNavigation(classroomB)
+    }
+    @IBAction func infoClassroomB(sender: UIButton) {
+        let text = "Course: \n Mobile Application Development \n ID: TX00CE69-3001"
+        let alert1 = UIAlertController(title: "Room ETYB303", message: text, preferredStyle: UIAlertControllerStyle.Alert)
+        alert1.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+        alert1.addAction(UIAlertAction(title: "Navigation", style: .Default, handler: { (action: UIAlertAction!) in self.goToClassroomB()
+        }))
+        self.presentViewController(alert1, animated: true, completion: nil)
+        
+    }
+    
+    func goToTeacherOffice(){
+        updateNavigation(teacherOffice)
+//        
+//        let path = UIBezierPath()
+//        let startPoint = locationView.calculatePicturePointFromRealPoint(currentPosition)
+//        print(startPoint)
+//        path.moveToPoint(startPoint)
+//        let interPoint = locationView.calculatePicturePointFromRealPoint(self.interPoint)
+//        path.moveToPoint(interPoint)
+//        
+//        
+//        let endPoint = locationView.calculatePicturePointFromRealPoint(teacherOffice)
+//        
+//        // x and y coordintion start from the lowest left corner of the map view
+//        
+//        path.addLineToPoint(CGPoint(x: endPoint.x, y: interPoint.y))
+//        path.addLineToPoint(endPoint)
+//        if navigationLayer != nil {
+//            navigationLayer.removeFromSuperlayer()
+//        }
+//        navigationLayer = CAShapeLayer()
+//        navigationLayer.path = path.CGPath
+//        navigationLayer.strokeColor = UIColor.blackColor().CGColor
+//        navigationLayer.fillColor = UIColor.clearColor().CGColor
+//        navigationLayer.lineDashPattern = [3,4]
+//        locationView.layer.insertSublayer(navigationLayer, atIndex: 0)
+    }
+    
+    @IBAction func infoTeacherOffice(sender: UIButton) {
+        let text = "Course: \n Mobile Application Development \n ID: TX00CE69-3001"
+        let alert1 = UIAlertController(title: "Teacher Office", message: text, preferredStyle: UIAlertControllerStyle.Alert)
+        alert1.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+        alert1.addAction(UIAlertAction(title: "Navigation", style: .Default, handler: { (action: UIAlertAction!) in self.goToTeacherOffice()
+        }))
+        self.presentViewController(alert1, animated: true, completion: nil)
+        
+    }
+    
+    func goToMeetingRoom(){
+        updateNavigation(meetingRoom)
+    }
+    @IBAction func infoMeetingRoom(sender: UIButton) {
+        let text = "Course: \n Mobile Application Development \n ID: TX00CE69-3001"
+        let alert1 = UIAlertController(title: "Meeting Room", message: text, preferredStyle: UIAlertControllerStyle.Alert)
+        alert1.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+        alert1.addAction(UIAlertAction(title: "Navigation", style: .Default, handler: { (action: UIAlertAction!) in self.goToMeetingRoom()
+        }))
+        self.presentViewController(alert1, animated: true, completion: nil)
+        
+    }
+    
+    
+    func updateNavigation(destination: EILPoint) {
+        //self.classroomA = destination
         let path = UIBezierPath()
-        let newPoint = locationView.calculatePicturePointFromRealPoint(currentPosition)
-        path.moveToPoint(newPoint)
-        let newPoint2 = locationView.calculatePicturePointFromRealPoint(EILOrientedPoint(x: 1.5, y: 1.5, orientation: 0))
+        let startPoint = locationView.calculatePicturePointFromRealPoint(currentPosition)
+        print(startPoint)
+        path.moveToPoint(startPoint)
+        //let interPoint2 = locationView.calculatePicturePointFromRealPoint(EILOrientedPoint(x: 7.0, y: startPoint.y, orientation: 0))
+        let endPoint = locationView.calculatePicturePointFromRealPoint(destination)
+        
         // x and y coordintion start from the lowest left corner of the map view
-        path.addLineToPoint(CGPoint(x: newPoint2.x, y: newPoint.y))
-        path.addLineToPoint(newPoint2)
+        path.addLineToPoint(CGPoint(x: endPoint.x, y: startPoint.y))
+        path.addLineToPoint(endPoint)
         if navigationLayer != nil {
             navigationLayer.removeFromSuperlayer()
         }
-        //        navigationLayer.removeFromSuperlayer()
         navigationLayer = CAShapeLayer()
         navigationLayer.path = path.CGPath
         navigationLayer.strokeColor = UIColor.blackColor().CGColor
@@ -137,9 +236,8 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
             currentPosition = position
             
             self.locationView.updatePosition(position)
-            updateNavigation()
+            //updateNavigation()
     }
-    
 
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
@@ -149,10 +247,7 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
         self.filtterrooms(searchroom)
     }
     
-    
     func filtterrooms(searchtext: String) {
-        
-        
         //reference to appDelegate
         let appdel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
         
@@ -216,11 +311,6 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
 
     
     @IBAction func displayfavourites() {
-//        
-//        let view = UIView.init(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-//        view.backgroundColor = UIColor.grayColor()
-//        self.view.addSubview(view)
-        
         //reference to appDelegate
         let appdel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
         
@@ -276,7 +366,6 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
     }
     
     
-    let teacherOffice = EILPoint(x: 8.0, y: 1.0)
 //    if location.distanceToPoint
     
         
