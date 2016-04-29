@@ -13,10 +13,4 @@
 #endif /* ObjCBridge_h */
 
 #import "EILIndoorSDK.h"
-//#import <ESTLocation.h>
-//#import <ESTlocationBuilder.h>
-//#import <ESTIndoorLocationManager.h>
-//#import <ESTConfig.h>
-//#import "Constants.h"
-//#import <ESTIndoorlocationView.h>
 #import "SWRevealViewController.h"
