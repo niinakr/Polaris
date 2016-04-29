@@ -1,15 +1,14 @@
 //
 //  Room.swift
-//  PolarisApp
+//  
 //
-//  Created by Niina Kristiina on 20/04/16.
-//  Copyright © 2016 Niina Kristiina. All rights reserved.
+//  Created by Niina Kristiina on 28/04/16.
+//
 //
 
 import Foundation
 import CoreData
 
-//
 
 class Room: NSManagedObject {
 

@@ -10,13 +10,12 @@ import Foundation
 import CoreData
 
 class menubar_register: UIViewController {
+    
   
     @IBOutlet weak var avatar: UITextField!
-    var toPass:String!
-    
+
 
     override func viewDidLoad() {
-        avatar.text = toPass
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
     }
@@ -49,6 +48,7 @@ class menubar_register: UIViewController {
             
             
         }
+       
 
         
     }
@@ -63,4 +63,15 @@ class menubar_register: UIViewController {
             }
         }
     }
+    
+//    override func prepareForSegue(segue: (UIStoryboardSegue!), sender: AnyObject!) {
+//        if (segue.identifier == "segueAvatar") {
+//            let svc = segue.destinationViewController as! ViewController;
+//            
+//            
+//            svc.toPass = avatar.text
+//            
+//        }
+//    }
+
 }
