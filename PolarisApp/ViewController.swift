@@ -15,20 +15,18 @@ import CoreData
 class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationManagerDelegate {
     
   
+    @IBOutlet weak var Menu: MyCustomButton!
     
     @IBOutlet weak var searchView: UISearchBar!
     
-    @IBOutlet weak var Menu: UIBarButtonItem!
-  
-    
+//    @IBOutlet weak var Menu: UIBarButtonItem!
+//    
     @IBOutlet weak var myLocationView: EILIndoorLocationView!
     
     @IBOutlet weak var positionLabel: UILabel!
     
     @IBOutlet weak var Avatar_name: UILabel!
-    
-//    var toPass:String!
-//    
+      
     var favourite:Favourites?
     
    
@@ -189,7 +187,7 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
         
         
     }
-    
+
     @IBAction func addasfavourite() {
         
 
@@ -257,29 +255,6 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
     }
     
     
-    func getCurrentAvatar()-> User {
-         print("getCurrentAvatar() function")
-        let moContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
-        let req = NSFetchRequest(entityName: "User")
-    
-        do {
-            let fetchedResults = try moContext.executeFetchRequest(req)
-            if fetchedResults.count == 0 {
-                print("fetchedResults is == 0")
-                let newavatar2 = NSEntityDescription.insertNewObjectForEntityForName("User",inManagedObjectContext: moContext) as NSManagedObject
-                newavatar2.setValue("kukkuu", forKey: "avatar_name")
-                try moContext.save()
-                print(newavatar2)
-
-            }
-            print("fetchedResults[ 0 ]")
-            return fetchedResults[(fetchedResults.count)-1] as! User
-        } catch let error as NSError {
-            print(error.localizedDescription)
-            return User()
-        }
-    }
-    
     func Addrooms()-> Room {
 
         
@@ -341,16 +316,15 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
         
         super.viewDidLoad()
         
-        // update label with avatar name
-        let user:User = getCurrentAvatar()
-        Avatar_name.text = user.avatar_name
         Addrooms()
         
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        
+        Menu.addTarget(self.revealViewController(), action: "revealToggle:", forControlEvents: UIControlEvents.TouchUpInside)
     
         
-        Menu.target = self.revealViewController()
-        Menu.action = #selector(SWRevealViewController.revealToggle(_:))
+//        Menu.target = self.revealViewController()
+//        Menu.action = #selector(SWRevealViewController.revealToggle(_:))
         
         
         self.locationManager.delegate = self
