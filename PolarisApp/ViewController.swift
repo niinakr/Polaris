@@ -15,10 +15,11 @@ import CoreData
 class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationManagerDelegate {
     
   
+    @IBOutlet weak var Menu: MyCustomButton!
     
     @IBOutlet weak var searchView: UISearchBar!
     
-    @IBOutlet weak var Menu: UIBarButtonItem!
+    //@IBOutlet weak var Menu: UIBarButtonItem!
   
     
     @IBOutlet weak var locationView: EILIndoorLocationView!
@@ -47,7 +48,8 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
         // update label with avatar name
 //        let user:User = getCurrentAvatar()
 //        Avatar_name.text = user.avatar_name
-        Addrooms()
+        
+        //Addrooms()
         
         //for swiping menu
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
@@ -348,28 +350,28 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
     
     
     
-    func getCurrentAvatar()-> User {
-         print("getCurrentAvatar() function")
-        let moContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
-        let req = NSFetchRequest(entityName: "User")
-    
-        do {
-            let fetchedResults = try moContext.executeFetchRequest(req)
-            if fetchedResults.count == 0 {
-                print("fetchedResults is == 0")
-                let newavatar2 = NSEntityDescription.insertNewObjectForEntityForName("User",inManagedObjectContext: moContext) as NSManagedObject
-                newavatar2.setValue("kukkuu", forKey: "avatar_name")
-                try moContext.save()
-                print(newavatar2)
-
-            }
-            print("fetchedResults[ 0 ]")
-            return fetchedResults[(fetchedResults.count)-1] as! User
-        } catch let error as NSError {
-            print(error.localizedDescription)
-            return User()
-        }
-    }
+//    func getCurrentAvatar()-> User {
+//         print("getCurrentAvatar() function")
+//        let moContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+//        let req = NSFetchRequest(entityName: "User")
+//    
+//        do {
+//            let fetchedResults = try moContext.executeFetchRequest(req)
+//            if fetchedResults.count == 0 {
+//                print("fetchedResults is == 0")
+//                let newavatar2 = NSEntityDescription.insertNewObjectForEntityForName("User",inManagedObjectContext: moContext) as NSManagedObject
+//                newavatar2.setValue("kukkuu", forKey: "avatar_name")
+//                try moContext.save()
+//                print(newavatar2)
+//
+//            }
+//            print("fetchedResults[ 0 ]")
+//            return fetchedResults[(fetchedResults.count)-1] as! User
+//        } catch let error as NSError {
+//            print(error.localizedDescription)
+//            return User()
+//        }
+//    }
     
     func Addrooms()-> Room {
         
@@ -417,19 +419,16 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
                                 else {
                                     print("0 results returned")
                                 }
-                            } catch{}            }
+                } catch{}            }
             
-            return fetchedResults[0] as! Room
+           // return fetchedResults[0,1,2] as! Room
         } catch let error as NSError {
             print("error")
             print(error.localizedDescription)
             return Room()
         }
-    
+    return Room()
     }
-    
-    
-    
     
     //Calls this function when the tap is recognized.
     func dismissKeyboard() {

@@ -12,15 +12,15 @@ import UIKit
 class MyCustomButton: UIButton {
     
     let borderAlpha : CGFloat = 0.7
-//    var mycolor = UIColor(netHex:#68efad)
+    //    var mycolor = UIColor(netHex:#68efad)
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.layer.cornerRadius = 15.0;
-        self.layer.borderColor = UIColor.cyanColor().CGColor
+        self.layer.borderColor = UIColor.whiteColor().CGColor
         self.layer.borderWidth = 2.0
         self.layer.shadowColor = UIColor.whiteColor().CGColor
         self.layer.shadowOpacity = 0.3
-        self.backgroundColor = UIColor.clearColor()
+        //        self.backgroundColor = UIColor.clearColor()
     }
 }
