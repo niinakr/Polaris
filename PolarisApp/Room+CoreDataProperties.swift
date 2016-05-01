@@ -16,8 +16,8 @@ extension Room {
 
     @NSManaged var beacon: String?
     @NSManaged var name: String?
-    @NSManaged var x: String?
-    @NSManaged var y: String?
+    @NSManaged var x: NSNumber?
+    @NSManaged var y: NSNumber?
     @NSManaged var room_Beacon: Beacons?
     @NSManaged var room_Teacher: NSManagedObject?
 

@@ -49,7 +49,8 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
 //        let user:User = getCurrentAvatar()
 //        Avatar_name.text = user.avatar_name
         
-        //addRooms()
+        //Adding data of rooms
+        addRooms()
         
         //for swiping menu
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
@@ -345,8 +346,55 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
     }
     
     func addRooms(){
+        let appDel:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        let context:NSManagedObjectContext = appDel.managedObjectContext
+        //let moContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        
+        let roomA = NSEntityDescription.insertNewObjectForEntityForName("Room", inManagedObjectContext: context) as! Room
+        roomA.name = "ETYB303"
+        roomA.x = 22
+        roomA.y = 11
+        
+        let roomB = NSEntityDescription.insertNewObjectForEntityForName("Room", inManagedObjectContext: context) as! Room
+        roomB.name = "ETYB304"
+        roomB.x = 22
+        roomB.y = 11
+        
+        let roomC = NSEntityDescription.insertNewObjectForEntityForName("Room", inManagedObjectContext: context) as! Room
+        roomC.name = "Teacher Office"
+        roomC.x = 22
+        roomC.y = 11
+        
+        let roomD = NSEntityDescription.insertNewObjectForEntityForName("Room", inManagedObjectContext: context) as! Room
+        roomD.name = "Meeting Room"
+        roomD.x = 22
+        roomD.y = 11
+        
+        let request = NSFetchRequest(entityName: "Room")
+        try! context.save()
+        print("Room: \(request.predicate)")
+        
+        request.returnsObjectsAsFaults = false;
+        print("Added all information from rooms")
+        
+        var results:NSArray
+        
+        do{
+            results = try context.executeFetchRequest(request)
+            if(results.count > 0){
+                for res in results{
+                    print(res)
+                    print(results)
+                }
+            } else {
+                print("0 results returned")
+            }
+        } catch let error as NSError {
+            print("Fetch failed: \(error.localizedDescription)")
+        }
         
     }
+    
     
     
     
@@ -408,7 +456,7 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
 //                        newroom4.setValue("33", forKey: "x")
 //                        newroom4.setValue("44", forKey: "y")
 //                
-//                //                Display the information from beacons
+//                // Display the information from beacons
 //                        let request = NSFetchRequest(entityName: "Room")
 //                        try moContext.save()
 //                        request.returnsObjectsAsFaults = false;
