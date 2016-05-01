@@ -49,15 +49,11 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
 //        let user:User = getCurrentAvatar()
 //        Avatar_name.text = user.avatar_name
         
-        //Addrooms()
+        //addRooms()
         
         //for swiping menu
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        Menu.target = self.revealViewController()
-//        Menu.action = selector(SWRevealViewController.revealToggle(self))
-//        Menu.action = selector(SWRevealViewController.revealToggle(self.))
-        
-        Menu.action = Selector("SWRevealViewController.revealToggle:")
+        Menu.addTarget(self.revealViewController(), action: "revealToggle:", forControlEvents: UIControlEvents.TouchUpInside)
         
         
         //get map from estimote
@@ -310,7 +306,9 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
                 searchView.text = "no results found"
                 print("0 results returned")
             }
-        } catch{}
+        } catch{
+        
+        }
         
     }
     
@@ -346,7 +344,9 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
         }
     }
     
-    
+    func addRooms(){
+        
+    }
     
     
     
@@ -373,62 +373,70 @@ class ViewController: UIViewController, UISearchBarDelegate, EILIndoorLocationMa
 //        }
 //    }
     
-    func Addrooms()-> Room {
-        
-        print("testing room")
-        let moContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
-        let req = NSFetchRequest(entityName: "Room")
-        
-        do {
-            let fetchedResults = try moContext.executeFetchRequest(req)
-            if fetchedResults.count == 0 {
-                let newroom1 = NSEntityDescription.insertNewObjectForEntityForName("Room", inManagedObjectContext: moContext) as NSManagedObject
-                        newroom1.setValue("ETYB 303", forKey: "name")
-                        newroom1.setValue("22", forKey: "x")
-                        newroom1.setValue("11", forKey: "y")
-                
-                
-                    let newroom2 = NSEntityDescription.insertNewObjectForEntityForName("Room", inManagedObjectContext: moContext) as NSManagedObject
-                        newroom2.setValue("ETYB 304", forKey: "name")
-                        newroom2.setValue("33", forKey: "x")
-                        newroom2.setValue("44", forKey: "y")
-                
-                    let newroom3 = NSEntityDescription.insertNewObjectForEntityForName("Room", inManagedObjectContext: moContext) as NSManagedObject
-                        newroom3.setValue("Meeting room", forKey: "name")
-                        newroom3.setValue("33", forKey: "x")
-                        newroom3.setValue("44", forKey: "y")
-                
-                    let newroom4 = NSEntityDescription.insertNewObjectForEntityForName("Room", inManagedObjectContext: moContext) as NSManagedObject
-                        newroom4.setValue("Teacher office", forKey: "name")
-                        newroom4.setValue("33", forKey: "x")
-                        newroom4.setValue("44", forKey: "y")
-                
-                //                Display the information from beacons
-                        let request = NSFetchRequest(entityName: "Room")
-                        try moContext.save()
-                        request.returnsObjectsAsFaults = false;
-                        print("Added all information from rooms")
-                
-                do {
-                                let result: NSArray =  try moContext.executeFetchRequest(request)
-                                if (result.count > 0) {
-                                    for res in result {
-                                        print(res)
-                                    }
-                                }
-                                else {
-                                    print("0 results returned")
-                                }
-                } catch{}            }
-            
-           // return fetchedResults[0,1,2] as! Room
-        } catch let error as NSError {
-            print("error")
-            print(error.localizedDescription)
-            return Room()
-        }
-    return Room()
-    }
+//    func Addrooms()-> Room {
+//        
+//        print("testing room")
+//        let moContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+//        let req = NSFetchRequest(entityName: "Room")
+//        
+//        do {
+//            let fetchedResults = try moContext.executeFetchRequest(req)
+//            if fetchedResults.count == 0 {
+//                let newroom1 = NSEntityDescription.insertNewObjectForEntityForName("Room", inManagedObjectContext: moContext) as! Room
+//                    newroom1.name = "ETYB 303"
+//                    newroom1.x = 22
+//                    newroom1.y = 11
+//                
+////                        newroom1.setValue("ETYB 303", forKey: "name")
+////                        newroom1.setValue("22", forKey: "x")
+////                        newroom1.setValue("11", forKey: "y")
+//                
+//                
+//                
+//                    let newroom2 = NSEntityDescription.insertNewObjectForEntityForName("Room", inManagedObjectContext: moContext) as NSManagedObject
+//                        newroom2.setValue("ETYB 304", forKey: "name")
+//                        newroom2.setValue("33", forKey: "x")
+//                        newroom2.setValue("44", forKey: "y")
+//                
+//                    let newroom3 = NSEntityDescription.insertNewObjectForEntityForName("Room", inManagedObjectContext: moContext) as NSManagedObject
+//                        newroom3.setValue("Meeting room", forKey: "name")
+//                        newroom3.setValue("33", forKey: "x")
+//                        newroom3.setValue("44", forKey: "y")
+//                
+//                    let newroom4 = NSEntityDescription.insertNewObjectForEntityForName("Room", inManagedObjectContext: moContext) as NSManagedObject
+//                        newroom4.setValue("Teacher office", forKey: "name")
+//                        newroom4.setValue("33", forKey: "x")
+//                        newroom4.setValue("44", forKey: "y")
+//                
+//                //                Display the information from beacons
+//                        let request = NSFetchRequest(entityName: "Room")
+//                        try moContext.save()
+//                        request.returnsObjectsAsFaults = false;
+//                        print("Added all information from rooms")
+//                
+//                do {
+//                                let result: NSArray =  try moContext.executeFetchRequest(request)
+//                                if (result.count > 0) {
+//                                    for res in result {
+//                                        print(res)
+//                                    }
+//                                }
+//                                else {
+//                                    print("0 results returned")
+//                                }
+//                } catch{}            }
+//            
+//           // return fetchedResults[0,1,2] as! Room
+//        } catch let error as NSError {
+//            print("error")
+//            print(error.localizedDescription)
+//            return Room()
+//        }
+//    return Room()
+//    }
+//    
+    
+    
     
     //Calls this function when the tap is recognized.
     func dismissKeyboard() {
