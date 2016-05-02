@@ -1,0 +1,757 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		277ACCF5A8C6EF6070CB5704 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0495908A0C4D8A24C5B3E90 /* libPods.a */; };
+		3E0D9FA31CCA381200AC4831 /* MenubarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0D9FA21CCA381200AC4831 /* MenubarVC.swift */; };
+		3E0D9FB11CCA69D700AC4831 /* menubar_beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0D9FB01CCA69D700AC4831 /* menubar_beacon.swift */; };
+		3E37AC8B1CC52F560044E469 /* MyCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E37AC8A1CC52F560044E469 /* MyCustomButton.swift */; };
+		3E47B1D81CCE7056006CF2A3 /* menubar_register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E47B1D71CCE7056006CF2A3 /* menubar_register.swift */; };
+		3E47B1DC1CCE7314006CF2A3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E47B1DA1CCE7314006CF2A3 /* User.swift */; };
+		3E47B1E41CCE73C9006CF2A3 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E47B1E31CCE73C9006CF2A3 /* User+CoreDataProperties.swift */; };
+		3E47B1E91CD24F58006CF2A3 /* Room+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E47B1E71CD24F58006CF2A3 /* Room+CoreDataProperties.swift */; };
+		3E47B1EA1CD24F58006CF2A3 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E47B1E81CD24F58006CF2A3 /* Room.swift */; };
+		3E54EBCC1CC75FB9003A115E /* Beacons+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E54EBCA1CC75FB9003A115E /* Beacons+CoreDataProperties.swift */; };
+		3E54EBCD1CC75FB9003A115E /* Beacons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E54EBCB1CC75FB9003A115E /* Beacons.swift */; };
+		3E9AB1C51CBBC6BA004C38E8 /* favouritelistTBV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9AB1C41CBBC6BA004C38E8 /* favouritelistTBV.swift */; };
+		3E9AB1CC1CBBCEDF004C38E8 /* Favourites+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9AB1CA1CBBCEDF004C38E8 /* Favourites+CoreDataProperties.swift */; };
+		3E9AB1CD1CBBCEDF004C38E8 /* Favourites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9AB1CB1CBBCEDF004C38E8 /* Favourites.swift */; };
+		3E9AB1D11CBD014A004C38E8 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E9AB1D01CBD014A004C38E8 /* Launch Screen.storyboard */; };
+		3EE744E51CB78E88004D0AEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE744E41CB78E88004D0AEF /* AppDelegate.swift */; };
+		3EE744E71CB78E88004D0AEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE744E61CB78E88004D0AEF /* ViewController.swift */; };
+		3EE744EA1CB78E88004D0AEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EE744E81CB78E88004D0AEF /* Main.storyboard */; };
+		3EE744ED1CB78E88004D0AEF /* PolarisApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3EE744EB1CB78E88004D0AEF /* PolarisApp.xcdatamodeld */; };
+		3EE744EF1CB78E88004D0AEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EE744EE1CB78E88004D0AEF /* Assets.xcassets */; };
+		3EE744F21CB78E88004D0AEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EE744F01CB78E88004D0AEF /* LaunchScreen.storyboard */; };
+		3EE744FD1CB78E88004D0AEF /* PolarisAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE744FC1CB78E88004D0AEF /* PolarisAppTests.swift */; };
+		3EE745081CB78E88004D0AEF /* PolarisAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE745071CB78E88004D0AEF /* PolarisAppUITests.swift */; };
+		3EE745161CBAB7E6004D0AEF /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE745151CBAB7E6004D0AEF /* DataController.swift */; };
+		3EE745181CBAB9B3004D0AEF /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE745171CBAB9B3004D0AEF /* Mapbox.framework */; };
+		3EE745191CBAB9B3004D0AEF /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE745171CBAB9B3004D0AEF /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3EF7CD171CCA0FD500A68F5E /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF7CD161CCA0FD500A68F5E /* SWRevealViewController.m */; };
+		6AEEB6001CC7A58F00FE341B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEEB5FF1CC7A58F00FE341B /* MapViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3EE744F91CB78E88004D0AEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3EE744D91CB78E87004D0AEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3EE744E01CB78E87004D0AEF;
+			remoteInfo = PolarisApp;
+		};
+		3EE745041CB78E88004D0AEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3EE744D91CB78E87004D0AEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3EE744E01CB78E87004D0AEF;
+			remoteInfo = PolarisApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3EE7451A1CBAB9B3004D0AEF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3EE745191CBAB9B3004D0AEF /* Mapbox.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3E0D9FA21CCA381200AC4831 /* MenubarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenubarVC.swift; sourceTree = "<group>"; };
+		3E0D9FB01CCA69D700AC4831 /* menubar_beacon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menubar_beacon.swift; sourceTree = "<group>"; };
+		3E37AC8A1CC52F560044E469 /* MyCustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomButton.swift; sourceTree = "<group>"; };
+		3E47B1D71CCE7056006CF2A3 /* menubar_register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menubar_register.swift; sourceTree = "<group>"; };
+		3E47B1DA1CCE7314006CF2A3 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3E47B1E31CCE73C9006CF2A3 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3E47B1E71CD24F58006CF2A3 /* Room+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Room+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3E47B1E81CD24F58006CF2A3 /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		3E54EBCA1CC75FB9003A115E /* Beacons+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Beacons+CoreDataProperties.swift"; path = "../Beacons+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3E54EBCB1CC75FB9003A115E /* Beacons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Beacons.swift; path = ../Beacons.swift; sourceTree = "<group>"; };
+		3E9AB1C41CBBC6BA004C38E8 /* favouritelistTBV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = favouritelistTBV.swift; sourceTree = "<group>"; };
+		3E9AB1CA1CBBCEDF004C38E8 /* Favourites+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Favourites+CoreDataProperties.swift"; path = "../Favourites+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3E9AB1CB1CBBCEDF004C38E8 /* Favourites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Favourites.swift; path = ../Favourites.swift; sourceTree = "<group>"; };
+		3E9AB1D01CBD014A004C38E8 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		3EE744E11CB78E87004D0AEF /* PolarisApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PolarisApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EE744E41CB78E88004D0AEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3EE744E61CB78E88004D0AEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3EE744E91CB78E88004D0AEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3EE744EC1CB78E88004D0AEF /* PolarisApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PolarisApp.xcdatamodel; sourceTree = "<group>"; };
+		3EE744EE1CB78E88004D0AEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3EE744F11CB78E88004D0AEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3EE744F31CB78E88004D0AEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EE744F81CB78E88004D0AEF /* PolarisAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolarisAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EE744FC1CB78E88004D0AEF /* PolarisAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolarisAppTests.swift; sourceTree = "<group>"; };
+		3EE744FE1CB78E88004D0AEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EE745031CB78E88004D0AEF /* PolarisAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolarisAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EE745071CB78E88004D0AEF /* PolarisAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolarisAppUITests.swift; sourceTree = "<group>"; };
+		3EE745091CB78E88004D0AEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EE745151CBAB7E6004D0AEF /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		3EE745171CBAB9B3004D0AEF /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapbox.framework; sourceTree = "<group>"; };
+		3EF7CD151CCA0FD500A68F5E /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		3EF7CD161CCA0FD500A68F5E /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		3EF7CD191CCA10A400A68F5E /* PolarisApp-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PolarisApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		3F80A71B5055177E7D9434BD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		6ABAE4EA1CD38919006CD2F0 /* ObjCBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjCBridge.h; path = PolarisApp/ObjCBridge.h; sourceTree = "<group>"; };
+		6AEEB5FF1CC7A58F00FE341B /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		836CABC3954045544DEAD265 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B0495908A0C4D8A24C5B3E90 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3EE744DE1CB78E87004D0AEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EE745181CBAB9B3004D0AEF /* Mapbox.framework in Frameworks */,
+				277ACCF5A8C6EF6070CB5704 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EE744F51CB78E88004D0AEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EE745001CB78E88004D0AEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E0D9FA41CCA38DF00AC4831 /* SWRevealController */ = {
+			isa = PBXGroup;
+			children = (
+				3EF7CD161CCA0FD500A68F5E /* SWRevealViewController.m */,
+				3EF7CD191CCA10A400A68F5E /* PolarisApp-Bridging-Header.h */,
+				3EF7CD151CCA0FD500A68F5E /* SWRevealViewController.h */,
+			);
+			name = SWRevealController;
+			sourceTree = "<group>";
+		};
+		3E0D9FA51CCA390900AC4831 /* Menubar */ = {
+			isa = PBXGroup;
+			children = (
+				3E0D9FA21CCA381200AC4831 /* MenubarVC.swift */,
+				3E0D9FA41CCA38DF00AC4831 /* SWRevealController */,
+				3E0D9FB01CCA69D700AC4831 /* menubar_beacon.swift */,
+				3E47B1D71CCE7056006CF2A3 /* menubar_register.swift */,
+			);
+			name = Menubar;
+			sourceTree = "<group>";
+		};
+		3E0D9FA61CCA391B00AC4831 /* Core data */ = {
+			isa = PBXGroup;
+			children = (
+				3E47B1E71CD24F58006CF2A3 /* Room+CoreDataProperties.swift */,
+				3E47B1E81CD24F58006CF2A3 /* Room.swift */,
+				3E47B1E31CCE73C9006CF2A3 /* User+CoreDataProperties.swift */,
+				3E47B1DA1CCE7314006CF2A3 /* User.swift */,
+				3E9AB1CA1CBBCEDF004C38E8 /* Favourites+CoreDataProperties.swift */,
+				3E9AB1CB1CBBCEDF004C38E8 /* Favourites.swift */,
+				3E54EBCB1CC75FB9003A115E /* Beacons.swift */,
+				3E54EBCA1CC75FB9003A115E /* Beacons+CoreDataProperties.swift */,
+			);
+			name = "Core data";
+			sourceTree = "<group>";
+		};
+		3E0D9FA71CCA393B00AC4831 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				3E37AC8A1CC52F560044E469 /* MyCustomButton.swift */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		3EE744D81CB78E87004D0AEF = {
+			isa = PBXGroup;
+			children = (
+				6ABAE4EA1CD38919006CD2F0 /* ObjCBridge.h */,
+				3EE745171CBAB9B3004D0AEF /* Mapbox.framework */,
+				3EE744E31CB78E88004D0AEF /* PolarisApp */,
+				3EE744FB1CB78E88004D0AEF /* PolarisAppTests */,
+				3EE745061CB78E88004D0AEF /* PolarisAppUITests */,
+				3EE744E21CB78E87004D0AEF /* Products */,
+				60D404BAE9AF0CEDEEF25F9F /* Pods */,
+				8BAC9557D28ABA833A3EF2ED /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3EE744E21CB78E87004D0AEF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3EE744E11CB78E87004D0AEF /* PolarisApp.app */,
+				3EE744F81CB78E88004D0AEF /* PolarisAppTests.xctest */,
+				3EE745031CB78E88004D0AEF /* PolarisAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3EE744E31CB78E88004D0AEF /* PolarisApp */ = {
+			isa = PBXGroup;
+			children = (
+				3E0D9FA71CCA393B00AC4831 /* UI */,
+				3E0D9FA61CCA391B00AC4831 /* Core data */,
+				3E0D9FA51CCA390900AC4831 /* Menubar */,
+				3EE744E41CB78E88004D0AEF /* AppDelegate.swift */,
+				3EE744E61CB78E88004D0AEF /* ViewController.swift */,
+				6AEEB5FF1CC7A58F00FE341B /* MapViewController.swift */,
+				3EE744E81CB78E88004D0AEF /* Main.storyboard */,
+				3E9AB1C41CBBC6BA004C38E8 /* favouritelistTBV.swift */,
+				3EE744EE1CB78E88004D0AEF /* Assets.xcassets */,
+				3EE744F01CB78E88004D0AEF /* LaunchScreen.storyboard */,
+				3EE744F31CB78E88004D0AEF /* Info.plist */,
+				3EE744EB1CB78E88004D0AEF /* PolarisApp.xcdatamodeld */,
+				3EE745151CBAB7E6004D0AEF /* DataController.swift */,
+				3E9AB1D01CBD014A004C38E8 /* Launch Screen.storyboard */,
+			);
+			path = PolarisApp;
+			sourceTree = "<group>";
+		};
+		3EE744FB1CB78E88004D0AEF /* PolarisAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				3EE744FC1CB78E88004D0AEF /* PolarisAppTests.swift */,
+				3EE744FE1CB78E88004D0AEF /* Info.plist */,
+			);
+			path = PolarisAppTests;
+			sourceTree = "<group>";
+		};
+		3EE745061CB78E88004D0AEF /* PolarisAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3EE745071CB78E88004D0AEF /* PolarisAppUITests.swift */,
+				3EE745091CB78E88004D0AEF /* Info.plist */,
+			);
+			path = PolarisAppUITests;
+			sourceTree = "<group>";
+		};
+		60D404BAE9AF0CEDEEF25F9F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3F80A71B5055177E7D9434BD /* Pods.debug.xcconfig */,
+				836CABC3954045544DEAD265 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8BAC9557D28ABA833A3EF2ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B0495908A0C4D8A24C5B3E90 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3EE744E01CB78E87004D0AEF /* PolarisApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EE7450C1CB78E88004D0AEF /* Build configuration list for PBXNativeTarget "PolarisApp" */;
+			buildPhases = (
+				64DE504476A2707970B85CF6 /* Check Pods Manifest.lock */,
+				3EE744DD1CB78E87004D0AEF /* Sources */,
+				3EE744DE1CB78E87004D0AEF /* Frameworks */,
+				3EE744DF1CB78E87004D0AEF /* Resources */,
+				3EE7451A1CBAB9B3004D0AEF /* Embed Frameworks */,
+				1AB246A5067D21EE3E271E05 /* Embed Pods Frameworks */,
+				2AB9F7FCB91AA5BFAA929BD5 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PolarisApp;
+			productName = PolarisApp;
+			productReference = 3EE744E11CB78E87004D0AEF /* PolarisApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3EE744F71CB78E88004D0AEF /* PolarisAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EE7450F1CB78E88004D0AEF /* Build configuration list for PBXNativeTarget "PolarisAppTests" */;
+			buildPhases = (
+				3EE744F41CB78E88004D0AEF /* Sources */,
+				3EE744F51CB78E88004D0AEF /* Frameworks */,
+				3EE744F61CB78E88004D0AEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3EE744FA1CB78E88004D0AEF /* PBXTargetDependency */,
+			);
+			name = PolarisAppTests;
+			productName = PolarisAppTests;
+			productReference = 3EE744F81CB78E88004D0AEF /* PolarisAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3EE745021CB78E88004D0AEF /* PolarisAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EE745121CB78E88004D0AEF /* Build configuration list for PBXNativeTarget "PolarisAppUITests" */;
+			buildPhases = (
+				3EE744FF1CB78E88004D0AEF /* Sources */,
+				3EE745001CB78E88004D0AEF /* Frameworks */,
+				3EE745011CB78E88004D0AEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3EE745051CB78E88004D0AEF /* PBXTargetDependency */,
+			);
+			name = PolarisAppUITests;
+			productName = PolarisAppUITests;
+			productReference = 3EE745031CB78E88004D0AEF /* PolarisAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3EE744D91CB78E87004D0AEF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Niina Kristiina";
+				TargetAttributes = {
+					3EE744E01CB78E87004D0AEF = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = S4A5DTM26G;
+					};
+					3EE744F71CB78E88004D0AEF = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = S4A5DTM26G;
+						TestTargetID = 3EE744E01CB78E87004D0AEF;
+					};
+					3EE745021CB78E88004D0AEF = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = S4A5DTM26G;
+						TestTargetID = 3EE744E01CB78E87004D0AEF;
+					};
+				};
+			};
+			buildConfigurationList = 3EE744DC1CB78E87004D0AEF /* Build configuration list for PBXProject "PolarisApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3EE744D81CB78E87004D0AEF;
+			productRefGroup = 3EE744E21CB78E87004D0AEF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3EE744E01CB78E87004D0AEF /* PolarisApp */,
+				3EE744F71CB78E88004D0AEF /* PolarisAppTests */,
+				3EE745021CB78E88004D0AEF /* PolarisAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3EE744DF1CB78E87004D0AEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EE744F21CB78E88004D0AEF /* LaunchScreen.storyboard in Resources */,
+				3EE744EF1CB78E88004D0AEF /* Assets.xcassets in Resources */,
+				3E9AB1D11CBD014A004C38E8 /* Launch Screen.storyboard in Resources */,
+				3EE744EA1CB78E88004D0AEF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EE744F61CB78E88004D0AEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EE745011CB78E88004D0AEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1AB246A5067D21EE3E271E05 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2AB9F7FCB91AA5BFAA929BD5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		64DE504476A2707970B85CF6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3EE744DD1CB78E87004D0AEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EE744ED1CB78E88004D0AEF /* PolarisApp.xcdatamodeld in Sources */,
+				3E54EBCC1CC75FB9003A115E /* Beacons+CoreDataProperties.swift in Sources */,
+				3E47B1EA1CD24F58006CF2A3 /* Room.swift in Sources */,
+				3E0D9FB11CCA69D700AC4831 /* menubar_beacon.swift in Sources */,
+				3E9AB1CD1CBBCEDF004C38E8 /* Favourites.swift in Sources */,
+				3E47B1E91CD24F58006CF2A3 /* Room+CoreDataProperties.swift in Sources */,
+				3E9AB1CC1CBBCEDF004C38E8 /* Favourites+CoreDataProperties.swift in Sources */,
+				3E0D9FA31CCA381200AC4831 /* MenubarVC.swift in Sources */,
+				3E47B1DC1CCE7314006CF2A3 /* User.swift in Sources */,
+				6AEEB6001CC7A58F00FE341B /* MapViewController.swift in Sources */,
+				3EF7CD171CCA0FD500A68F5E /* SWRevealViewController.m in Sources */,
+				3E9AB1C51CBBC6BA004C38E8 /* favouritelistTBV.swift in Sources */,
+				3E54EBCD1CC75FB9003A115E /* Beacons.swift in Sources */,
+				3E37AC8B1CC52F560044E469 /* MyCustomButton.swift in Sources */,
+				3EE745161CBAB7E6004D0AEF /* DataController.swift in Sources */,
+				3EE744E71CB78E88004D0AEF /* ViewController.swift in Sources */,
+				3E47B1D81CCE7056006CF2A3 /* menubar_register.swift in Sources */,
+				3EE744E51CB78E88004D0AEF /* AppDelegate.swift in Sources */,
+				3E47B1E41CCE73C9006CF2A3 /* User+CoreDataProperties.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EE744F41CB78E88004D0AEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EE744FD1CB78E88004D0AEF /* PolarisAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EE744FF1CB78E88004D0AEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EE745081CB78E88004D0AEF /* PolarisAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3EE744FA1CB78E88004D0AEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3EE744E01CB78E87004D0AEF /* PolarisApp */;
+			targetProxy = 3EE744F91CB78E88004D0AEF /* PBXContainerItemProxy */;
+		};
+		3EE745051CB78E88004D0AEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3EE744E01CB78E87004D0AEF /* PolarisApp */;
+			targetProxy = 3EE745041CB78E88004D0AEF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3EE744E81CB78E88004D0AEF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3EE744E91CB78E88004D0AEF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3EE744F01CB78E88004D0AEF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3EE744F11CB78E88004D0AEF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3EE7450A1CB78E88004D0AEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3EE7450B1CB78E88004D0AEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3EE7450D1CB78E88004D0AEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F80A71B5055177E7D9434BD /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = PolarisApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = niinakristiina.PolarisApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_NAME}/ObjCBridge.h";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		3EE7450E1CB78E88004D0AEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 836CABC3954045544DEAD265 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = PolarisApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = niinakristiina.PolarisApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_NAME}/ObjCBridge.h";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		3EE745101CB78E88004D0AEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PolarisAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = comniina.example..PolarisAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PolarisApp.app/PolarisApp";
+			};
+			name = Debug;
+		};
+		3EE745111CB78E88004D0AEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PolarisAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = comniina.example..PolarisAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PolarisApp.app/PolarisApp";
+			};
+			name = Release;
+		};
+		3EE745131CB78E88004D0AEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PolarisAppUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = comniina.example..PolarisAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PolarisApp;
+			};
+			name = Debug;
+		};
+		3EE745141CB78E88004D0AEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PolarisAppUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = comniina.example..PolarisAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PolarisApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3EE744DC1CB78E87004D0AEF /* Build configuration list for PBXProject "PolarisApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EE7450A1CB78E88004D0AEF /* Debug */,
+				3EE7450B1CB78E88004D0AEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EE7450C1CB78E88004D0AEF /* Build configuration list for PBXNativeTarget "PolarisApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EE7450D1CB78E88004D0AEF /* Debug */,
+				3EE7450E1CB78E88004D0AEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EE7450F1CB78E88004D0AEF /* Build configuration list for PBXNativeTarget "PolarisAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EE745101CB78E88004D0AEF /* Debug */,
+				3EE745111CB78E88004D0AEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EE745121CB78E88004D0AEF /* Build configuration list for PBXNativeTarget "PolarisAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EE745131CB78E88004D0AEF /* Debug */,
+				3EE745141CB78E88004D0AEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3EE744EB1CB78E88004D0AEF /* PolarisApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3EE744EC1CB78E88004D0AEF /* PolarisApp.xcdatamodel */,
+			);
+			currentVersion = 3EE744EC1CB78E88004D0AEF /* PolarisApp.xcdatamodel */;
+			path = PolarisApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 3EE744D91CB78E87004D0AEF /* Project object */;
+}
